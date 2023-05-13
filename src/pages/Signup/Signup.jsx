@@ -18,6 +18,7 @@ const Signup = ({ handleAuthEvt }) => {
     email: '',
     password: '',
     passwordConf: '',
+    preferredLanguage: 'spanish',
   })
   const [photoData, setPhotoData] = useState({ photo: null })
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -71,7 +72,7 @@ const Signup = ({ handleAuthEvt }) => {
     }
   }
 
-  const { name, email, password, passwordConf } = formData
+  const { name, email, password, passwordConf, preferredLanguage } = formData
 
   const isFormInvalid = () => {
     return !(name && email && password && password === passwordConf)
@@ -121,6 +122,16 @@ const Signup = ({ handleAuthEvt }) => {
             onChange={handleChangePhoto}
             ref={imgInputRef}
           />
+        </label>
+        <label className={styles.label}>
+          Language to learn
+          <select
+            name="preferredLanguage"
+          >
+            <option
+              value={preferredLanguage}
+            >{preferredLanguage}</option>
+          </select>
         </label>
         <div>
           <Link to="/">Cancel</Link>
