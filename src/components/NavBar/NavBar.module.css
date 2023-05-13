@@ -7,7 +7,7 @@
   /* position: fixed;  */
   /* padding: 14px 21px; */
   /* align-items: center; */
-  background: #374151;
+  background: var(--navBar-color);
   /* border-bottom: 1px solid rgb(200, 200, 200); */
 }
 
