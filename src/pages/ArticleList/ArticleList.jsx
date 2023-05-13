@@ -1,6 +1,9 @@
+// components
+import ArticleCard from "../../components/ArticleCard/ArticleCard"
+
 const ArticleList = (props) => {
   return (
-    <main className={styles.container}>
+    <main>
       {props.articles.map(article => (
         <ArticleCard key={article._id} article={article}/>
       ))}
