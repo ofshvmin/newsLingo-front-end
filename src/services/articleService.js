@@ -16,7 +16,7 @@ async function index() {
 
 async function show (articleId) {
   try {
-    const res = await fetch(BASE_URL, {
+    const res = await fetch(`${BASE_URL}/${articleId}`, {
       headers: { 'Authorization': `Bearer ${tokenService.getToken()}` }
     })
     return res.json()

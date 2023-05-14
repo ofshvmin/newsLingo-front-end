@@ -14,25 +14,26 @@ import * as articleService from '../../services/articleService'
 // components
 
 
-const ArticleDetails = (props) => {
+const ArticleDetails = () => {
   const {articleId} = useParams()
   const [article, setArticle] = useState(null)
 
   useEffect(() => {
     const fetchArticle = async () => {
       const data = await articleService.show(articleId)
+      console.log(data)
       setArticle(data)
     }
     fetchArticle()
   }, [articleId])
 
   // if (!article) return <Loading />
-  
+
   return (
     <main className={styles.container}>
       <article>
         This is an article
-        {article.content}
+        <p>{article.content}</p>
       </article>
 
     </main>

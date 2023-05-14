@@ -31,6 +31,7 @@ function App() {
     const fetchArticles = async () => {
       const data = await articleService.index()
       setArticles(data)
+      console.log(data)
     }
     if (user) fetchArticles()
   }, [user])
@@ -45,7 +46,6 @@ function App() {
     setUser(authService.getUser())
   }
 
-  console.log(articles)
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
