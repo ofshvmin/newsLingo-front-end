@@ -32,7 +32,7 @@ const ArticleDetails = () => {
   }, [articleId])
 
   const handleAddComment = async (commentFormData) => {
-    const newComment = await articleService.createComment (articleId, commentFormData)
+    const newComment = await articleService.createComment(articleId, commentFormData)
     setArticle({ ...article, comments: [...article.comments, newComment]})
   }
 
@@ -43,21 +43,21 @@ const ArticleDetails = () => {
 
   return (
     <main className={styles.container}>
-        <ArticleHeader 
-          title={article.title}
-          creator={creator} 
-          pubDate={article.pubDate} 
-          category={article.category}
-          image_url={image_url}
-        />
-        <ArticleBody 
-          content={article.content}
-        />
-        <WordLookup />
-        <section>
-          <h1>Comments</h1>
-          <NewComment handleAddComment={handleAddComment}/>
-        </section>
+      <ArticleHeader 
+        title={article.title}
+        creator={creator} 
+        pubDate={article.pubDate} 
+        category={article.category}
+        image_url={image_url}
+      />
+      <ArticleBody 
+        content={article.content}
+      />
+      <WordLookup />
+      <section>
+        <h1>Comments</h1>
+        <NewComment handleAddComment={handleAddComment}/>
+      </section>
     </main>
   )
 }

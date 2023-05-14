@@ -32,7 +32,7 @@ async function createComment(articleId, commentFormData) {
       headers: { 
         'Authorization': `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json' 
-      }
+      },
       body: JSON.stringify(commentFormData)
     })
     return res.json()
