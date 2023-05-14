@@ -4,10 +4,13 @@ import { Link } from "react-router-dom"
 // assets
 import articleImgPlaceholder from '../../assets/icons/no-image-icon.png'
 
+// css
+import styles from './ArticleCard.module.css'
+
 const ArticleCard = ({article}) => {
   return (  
     <Link to={`/articles/${article._id}`}>
-      <article>
+      <article className={styles.container}>
         { article.creator ?
           <h5>{article.creator[0]}</h5>
           :
@@ -19,8 +22,6 @@ const ArticleCard = ({article}) => {
           :
           <img src={articleImgPlaceholder} alt={article.title} />
         }
-          
-        
       </article>
     </Link>
   )
