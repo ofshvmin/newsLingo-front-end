@@ -7,6 +7,8 @@ import styles from './ArticleBody.module.css'
 // npm modules
 import { useState, useEffect } from 'react'
 
+
+
 const ArticleBody = (props) => {
   const [words, setWords] = useState([])
   let isStartQuote = false;
@@ -25,7 +27,8 @@ const ArticleBody = (props) => {
           <Word 
             key={idx} 
             word={word}
-          />
+            handleFetchDefinition={props.handleFetchDefinition}
+          />     
         )
       }
       )}

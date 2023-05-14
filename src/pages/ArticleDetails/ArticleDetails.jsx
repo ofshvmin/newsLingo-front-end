@@ -8,6 +8,7 @@ import articleImgPlaceholder from '../../assets/icons/no-image-icon.png'
 
 // services
 import * as articleService from '../../services/articleService'
+import * as wordService from '../../services/wordService.js'
 
 // pages
 import Loading from "../Loading/Loading"
@@ -22,6 +23,7 @@ import Comments from "../../components/Comments/Comments"
 const ArticleDetails = (props) => {
   const {articleId} = useParams()
   const [article, setArticle] = useState(null)
+  const [translations, setTranslations] = useState([])
 
   useEffect(() => {
     const fetchArticle = async () => {
@@ -35,6 +37,36 @@ const ArticleDetails = (props) => {
   const handleAddComment = async (commentFormData) => {
     const newComment = await articleService.createComment(articleId, commentFormData)
     setArticle({ ...article, comments: [...article.comments, newComment]})
+  }
+
+  const handleFetchDefinition = async (query) => {
+    const data = await wordService.getTranslationFromAPI(query.toLowerCase())
+
+    console.log('Data', data);
+
+    // If API has a translation...
+    if(data[0].hwi) {
+      // filter out unrelated translations (merriam-webster was sometimes giving additional translations for unrelated words)
+      const filteredData = data.filter(element => element.hwi.hw === query.toLowerCase() && element.meta.lang === 'es')
+
+      console.log("First filter", filteredData);
+      
+      // parse/simplify the results of the api call into 3 properties for each translation
+      const newWordTranslations = filteredData.map(entry => {
+        const translationInfo = {}
+        translationInfo.queryWord = entry.hwi.hw
+        translationInfo.partOfSpeech = entry.fl
+        translationInfo.translations = entry.shortdef.map(def => def)
+        return translationInfo
+      })
+
+      console.log('Final translation parse: ', translations);
+      setTranslations([newWordTranslations, ...translations])
+      console.log('Translations state', translations);
+    } else {
+      // merriam-webster returns alternative search suggestions when it can't find a given word
+      console.log("Word not found. Alternate search suggestions:", data);
+    }
   }
 
   if (!article) return <Loading />
@@ -53,6 +85,7 @@ const ArticleDetails = (props) => {
       />
       <ArticleBody 
         content={article.content}
+        handleFetchDefinition={handleFetchDefinition}
       />
       <WordLookup />
       <section>
