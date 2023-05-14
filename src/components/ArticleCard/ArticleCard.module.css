@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  /* border: 2px solid white; */
+  background-color: #374151;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  justify-content: space-between;
+}
+
+.container header {
+  margin: 15px;
+}
+
+.container img {
+  height: 100px;
+  text-align: right;
+  margin-right: 15px;
+}
