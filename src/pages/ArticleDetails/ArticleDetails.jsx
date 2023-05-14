@@ -2,8 +2,9 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 
-// css
+// css & assets
 import styles from './ArticleDetails.module.css'
+import articleImgPlaceholder from '../../assets/icons/no-image-icon.png'
 
 // services
 import * as articleService from '../../services/articleService'
@@ -12,7 +13,9 @@ import * as articleService from '../../services/articleService'
 // import Loading from "../Loading/Loading"
 
 // components
-
+import ArticleHeader from "../../components/ArticleHeader/ArticleHeader"
+import ArticleBody from "../../components/ArticleBody/ArticleBody"
+// import WordLookup from "../../components/WordLookup/WordLookup"
 
 const ArticleDetails = () => {
   const {articleId} = useParams()
@@ -27,13 +30,24 @@ const ArticleDetails = () => {
     fetchArticle()
   }, [articleId])
 
-  // if (!article) return <Loading />
+  if (!article) return <Loading />
+
+  // const creator = article.creator ? article.creator[0] : "NO CREATOR"
+  // const image_url = article.image_url ? article.image_url : articleImgPlaceholder
 
   return (
     <main className={styles.container}>
       <article>
-        This is an article
-        <p>{article.content}</p>
+        <ArticleHeader 
+          title={article.title}
+          // creator={creator} 
+          // pubDate={article.pubDate} 
+          // image_url={img}
+          // category={article.category}
+        />
+        {/* <ArticleBody 
+          content={article.content}
+        /> */}
       </article>
 
     </main>
