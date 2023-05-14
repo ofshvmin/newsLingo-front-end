@@ -1,0 +1,8 @@
+.container {
+  grid-area: article;
+  margin: 20px
+}
+
+.container p {
+  margin: 0;
+}

@@ -4,8 +4,8 @@ import styles from './WordLookup.module.css'
 
 const WordLookup = () => {
   return (
-    <aside>
-      Words go here
+    <aside className={styles.container}>
+      <p>Selected words go here</p>
     </aside>
   )
 }
