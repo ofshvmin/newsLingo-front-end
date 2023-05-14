@@ -11,12 +11,14 @@ const ArticleCard = ({article}) => {
   return (  
     <Link to={`/articles/${article._id}`}>
       <article className={styles.container}>
-        { article.creator ?
-          <h5>{article.creator[0]}</h5>
-          :
-          <h5>No Creator</h5>
-        }
-        <h1>{article.title}</h1>
+        <header>
+          { article.creator ?
+            <h4>{article.creator[0]}</h4>
+            :
+            <h5>NO CREATOR</h5>
+          }
+          <h1>{article.title}</h1>
+        </header>
         { article.image_url ?
           <img src={article.image_url} alt={article.title} />
           :
