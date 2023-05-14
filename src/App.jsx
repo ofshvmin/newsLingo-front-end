@@ -9,6 +9,7 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import ArticleList from './pages/ArticleList/ArticleList'
+import ArticleDetails from './pages/ArticleDetails/ArticleDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -54,6 +55,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <ArticleList articles={articles} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/articles/:articleId'
+          element={
+            <ProtectedRoute user={user}>
+              <ArticleDetails user={user}/>
             </ProtectedRoute>
           }
         />
