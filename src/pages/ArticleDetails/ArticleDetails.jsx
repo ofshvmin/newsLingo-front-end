@@ -47,7 +47,7 @@ const ArticleDetails = (props) => {
     // If API has a translation...
     if(data[0].hwi) {
       // filter out unrelated translations (merriam-webster was sometimes giving additional translations for unrelated words)
-      const filteredData = data.filter(element => element.hwi.hw === query.toLowerCase() && element.meta.lang === 'es')
+      const filteredData = data.filter(element => query.toLowerCase().includes(element.hwi.hw) && element.meta.lang === 'es')
 
       console.log("First filter", filteredData);
       
