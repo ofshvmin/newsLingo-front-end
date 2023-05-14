@@ -1,3 +1,5 @@
 .container {
-  margin: var(--page-margin)
+  margin: var(--page-margin);
+  display: grid;
+  grid-template-areas: 
 }

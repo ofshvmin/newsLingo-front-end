@@ -15,6 +15,7 @@ import Loading from "../Loading/Loading"
 // components
 import ArticleHeader from "../../components/ArticleHeader/ArticleHeader"
 import ArticleBody from "../../components/ArticleBody/ArticleBody"
+import WordLookup from "../../components/WordLookup/WordLookup"
 // import WordLookup from "../../components/WordLookup/WordLookup"
 
 const ArticleDetails = () => {
@@ -37,7 +38,6 @@ const ArticleDetails = () => {
 
   return (
     <main className={styles.container}>
-      <article>
         <ArticleHeader 
           title={article.title}
           creator={creator} 
@@ -48,8 +48,7 @@ const ArticleDetails = () => {
         <ArticleBody 
           content={article.content}
         />
-      </article>
-
+        <WordLookup />
     </main>
   )
 }
