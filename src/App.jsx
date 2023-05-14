@@ -10,6 +10,7 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import ArticleList from './pages/ArticleList/ArticleList'
 import ArticleDetails from './pages/ArticleDetails/ArticleDetails'
+import EditComment from './pages/EditComment/EditComment'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -66,6 +67,14 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path='/articles/:articleId/comments/:commentId'
+          element={
+            <ProtectedRoute user={user}>
+              <EditComment/>
+            </ProtectedRoute>
+          }
+        /> 
         <Route 
           path='/' 
           element={<Landing user={user} />} 

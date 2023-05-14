@@ -91,7 +91,11 @@ const ArticleDetails = (props) => {
       <section>
         <h1>Comments</h1>
         <NewComment handleAddComment={handleAddComment}/>
-        <Comments comments={article.comments} user={props.user}/>
+        <Comments 
+          comments={article.comments} 
+          user={props.user} 
+          articleId={articleId}
+        />
       </section>
     </main>
   )
