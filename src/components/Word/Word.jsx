@@ -8,6 +8,7 @@ const Word = (props) => {
 
   const handleClick = () => {
     console.log('Word is', props.word);
+    props.handleFetchDefinition(props.word)
   }
 
   const regExp = /[a-zA-Z]/g;
