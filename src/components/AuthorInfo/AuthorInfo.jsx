@@ -1,5 +1,5 @@
 // components
-// import DateCard from '../DateCard/DateCard'
+import DateCard from '../DateCard/DateCard'
 
 // assets
 import profileImg from '../../assets/icons/profilePlaceholder.png'
@@ -16,7 +16,7 @@ const AuthorInfo = ({ content }) => {
       <img src={photo} alt="The user's avatar" />
       <section>
         <h4>{content.author.name}</h4>
-        {/* <DateCard createdAt={content.createdAt} /> */}
+        <DateCard createdAt={content.createdAt} />
       </section>
     </div>
   )
