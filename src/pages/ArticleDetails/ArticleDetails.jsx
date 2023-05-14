@@ -17,8 +17,9 @@ import ArticleHeader from "../../components/ArticleHeader/ArticleHeader"
 import ArticleBody from "../../components/ArticleBody/ArticleBody"
 import WordLookup from "../../components/WordLookup/WordLookup"
 import NewComment from "../../components/NewComment/NewComment"
+import Comments from "../../components/Comments/Comments"
 
-const ArticleDetails = () => {
+const ArticleDetails = (props) => {
   const {articleId} = useParams()
   const [article, setArticle] = useState(null)
 
@@ -57,6 +58,7 @@ const ArticleDetails = () => {
       <section>
         <h1>Comments</h1>
         <NewComment handleAddComment={handleAddComment}/>
+        <Comments comments={article.comments} user={props.user}/>
       </section>
     </main>
   )
