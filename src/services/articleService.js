@@ -57,6 +57,18 @@ async function updateComment(articleId, commentId, commentFormData) {
   }
 }
 
+async function deleteComment(articleId, commentId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${articleId}/comments/${commentId}`, {
+      method: 'DELETE',
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}` }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 
 // template
 // async function show() {
@@ -76,4 +88,5 @@ export {
   show,
   createComment,
   updateComment,
+  deleteComment,
 }
