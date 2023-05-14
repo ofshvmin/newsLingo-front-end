@@ -16,7 +16,8 @@ import Loading from "../Loading/Loading"
 import ArticleHeader from "../../components/ArticleHeader/ArticleHeader"
 import ArticleBody from "../../components/ArticleBody/ArticleBody"
 import WordLookup from "../../components/WordLookup/WordLookup"
-// import WordLookup from "../../components/WordLookup/WordLookup"
+import NewComment from "../../components/NewComment/NewComment"
+import Comments from "../../components/Comments copy/Comments"
 
 const ArticleDetails = () => {
   const {articleId} = useParams()
@@ -38,17 +39,22 @@ const ArticleDetails = () => {
 
   return (
     <main className={styles.container}>
-        <ArticleHeader 
-          title={article.title}
-          creator={creator} 
-          pubDate={article.pubDate} 
-          category={article.category}
-          image_url={image_url}
-        />
-        <ArticleBody 
-          content={article.content}
-        />
-        <WordLookup />
+      <ArticleHeader 
+        title={article.title}
+        creator={creator} 
+        pubDate={article.pubDate} 
+        category={article.category}
+        image_url={image_url}
+      />
+      <ArticleBody 
+        content={article.content}
+      />
+      <WordLookup />
+      <section>
+        <h1>Comments</h1>
+        <NewComment handleAddComment={handleAddComment}/>
+        <Comments/>
+      </section>
     </main>
   )
 }
