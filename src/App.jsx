@@ -29,7 +29,6 @@ function App() {
   useEffect(()=> {
     const fetchArticles = async () => {
       const data = await articleService.index()
-      console.log('FETCHING ALL ARTICLES')
       setArticles(data)
     }
     if (user) fetchArticles()
@@ -45,6 +44,7 @@ function App() {
     setUser(authService.getUser())
   }
 
+  console.log(articles)
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
