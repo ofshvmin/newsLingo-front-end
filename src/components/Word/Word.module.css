@@ -1,0 +1,5 @@
+.wordElement:hover {
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+}
