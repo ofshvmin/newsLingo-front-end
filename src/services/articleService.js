@@ -14,6 +14,32 @@ async function index() {
   }
 }
 
+async function show (articleId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${articleId}`, {
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}` }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
+
+// async function show() {
+//   try {
+//     const res = await fetch(BASE_URL, {
+//       headers: { 'Authorization': `Bearer ${tokenService.getToken()}` }
+//     })
+//     return res.json()
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+
+
 export {
   index,
+  show,
 }
