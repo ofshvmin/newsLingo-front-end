@@ -2,5 +2,6 @@
   grid-area: header;
 }
 .container img {
-  width: 200px;
+  width: 100%;
+  margin-bottom: 50px;
 }
