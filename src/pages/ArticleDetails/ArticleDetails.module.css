@@ -3,7 +3,8 @@
   display: grid;
   grid-template-areas: 
     "header header"
-    "article aside";
+    "article aside"
+    "comments comments";
   grid-template-columns: 3fr 1fr;
   /* grid-template-rows: 1fr 2fr; */
 }

@@ -25,8 +25,23 @@ async function show (articleId) {
   }
 }
 
+async function createComment(articleId, commentFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${articleId}/comments`, {
+      method: 'POST',
+      headers: { 
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json' 
+      },
+      body: JSON.stringify(commentFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
 
-
+// template
 // async function show() {
 //   try {
 //     const res = await fetch(BASE_URL, {
@@ -42,4 +57,5 @@ async function show (articleId) {
 export {
   index,
   show,
+  createComment,
 }

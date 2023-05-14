@@ -16,7 +16,7 @@ import Loading from "../Loading/Loading"
 import ArticleHeader from "../../components/ArticleHeader/ArticleHeader"
 import ArticleBody from "../../components/ArticleBody/ArticleBody"
 import WordLookup from "../../components/WordLookup/WordLookup"
-// import WordLookup from "../../components/WordLookup/WordLookup"
+import NewComment from "../../components/NewComment/NewComment"
 
 const ArticleDetails = () => {
   const {articleId} = useParams()
@@ -31,6 +31,11 @@ const ArticleDetails = () => {
     fetchArticle()
   }, [articleId])
 
+  const handleAddComment = async (commentFormData) => {
+    const newComment = await articleService.createComment(articleId, commentFormData)
+    setArticle({ ...article, comments: [...article.comments, newComment]})
+  }
+
   if (!article) return <Loading />
 
   const creator = article.creator ? article.creator[0] : "NO CREATOR FOUND"
@@ -38,17 +43,21 @@ const ArticleDetails = () => {
 
   return (
     <main className={styles.container}>
-        <ArticleHeader 
-          title={article.title}
-          creator={creator} 
-          pubDate={article.pubDate} 
-          category={article.category}
-          image_url={image_url}
-        />
-        <ArticleBody 
-          content={article.content}
-        />
-        <WordLookup />
+      <ArticleHeader 
+        title={article.title}
+        creator={creator} 
+        pubDate={article.pubDate} 
+        category={article.category}
+        image_url={image_url}
+      />
+      <ArticleBody 
+        content={article.content}
+      />
+      <WordLookup />
+      <section>
+        <h1>Comments</h1>
+        <NewComment handleAddComment={handleAddComment}/>
+      </section>
     </main>
   )
 }

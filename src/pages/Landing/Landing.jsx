@@ -27,13 +27,11 @@ const Landing = () => {
           <h1>How is NewsLingo different from the rest?</h1>
         </header>
         <article>
-          <p>
-            <ul>
-              <li>NewsLingo scaffolds learners’ interpretive reading with convenient word-to-word translations within authentic, up-to-date news articles.</li>
-              <li>It boosts learners’ language acquisition with  a personal dictionary to keep track of newly learned vocabulary. </li>
-              <li>It allows learners to interact with a community via a comment section on each article.</li>
-            </ul>
-          </p>
+          <ul>
+            <li>NewsLingo scaffolds learners’ interpretive reading with convenient word-to-word translations within authentic, up-to-date news articles.</li>
+            <li>It boosts learners’ language acquisition with  a personal dictionary to keep track of newly learned vocabulary. </li>
+            <li>It allows learners to interact with a community via a comment section on each article.</li>
+          </ul>
         </article>
       </section>
     </main>
