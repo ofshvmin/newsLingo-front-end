@@ -1,12 +1,47 @@
 // css
 import styles from './Landing.module.css'
+const logDir = '../../../public/branding/logoPlaceholder.png'
 
-const Landing = ({ user }) => {
+const Landing = () => {
   return (
+    <>
     <main className={styles.container}>
-      <h1>hello, {user ? user.name : 'friend'}</h1>
+      <section className={styles.splash}>
+        <img src={logDir} alt="NewsLingo" />
+        <h1> Breaking News, Breaking Barriers </h1>
+      </section>
+
+      <section className={styles.about}>
+        <header>
+          <h1>What does NewsLingo solve?</h1>
+        </header>
+        <article>
+          <p>
+            News articles are a great source for practicing a new language and learning about the cultures of those who speak it. For novice and intermediate-level language learners, news articles can be challenging to interpret.
+          </p>
+        </article>
+      </section>
+
+      <section className={styles.testimonial}>
+        <header>
+          <h1>How is NewsLingo different from the rest?</h1>
+        </header>
+        <article>
+          <p>
+            <ul>
+              <li>NewsLingo scaffolds learners’ interpretive reading with convenient word-to-word translations within authentic, up-to-date news articles.</li>
+              <li>It boosts learners’ language acquisition with  a personal dictionary to keep track of newly learned vocabulary. </li>
+              <li>It allows learners to interact with a community via a comment section on each article.</li>
+            </ul>
+          </p>
+        </article>
+      </section>
     </main>
-  )
+    <footer className={styles.footer}>
+      <p>© 2023 NEWSLINGO ALL RIGHTS RESERVED</p>
+    </footer>
+  </>
+)
 }
 
 export default Landing

@@ -18,6 +18,7 @@ import * as authService from './services/authService'
 
 // styles
 import './App.css'
+import LoginPage from './pages/Login/Login'
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
