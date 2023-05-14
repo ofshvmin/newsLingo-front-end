@@ -1,13 +1,13 @@
 // css
 import styles from './Landing.module.css'
-const logDir = '../../../public/branding/logoPlaceholder.png'
+import logo from '../../assets/icons/logoPlaceholder.png'
 
 const Landing = () => {
   return (
     <>
     <main className={styles.container}>
       <section className={styles.splash}>
-        <img src={logDir} alt="NewsLingo" />
+        <img src={logo} alt="NewsLingo" />
         <h1> Breaking News, Breaking Barriers </h1>
       </section>
 
@@ -22,7 +22,7 @@ const Landing = () => {
         </article>
       </section>
 
-      <section className={styles.testimonial}>
+      <section className={styles.summary}>
         <header>
           <h1>How is NewsLingo different from the rest?</h1>
         </header>
