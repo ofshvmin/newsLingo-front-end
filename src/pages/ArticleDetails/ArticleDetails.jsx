@@ -47,7 +47,7 @@ const ArticleDetails = (props) => {
     // If API has a translation...
     if(data[0].hwi) {
       // filter out unrelated translations (merriam-webster was sometimes giving additional translations for unrelated words)
-      const filteredData = data.filter(element => element.hwi.hw === query.toLowerCase() && element.meta.lang === 'es')
+      const filteredData = data.filter(element => element.meta.stems.includes(query.toLowerCase()) && element.meta.lang === 'es')
 
       console.log("First filter", filteredData);
       
@@ -60,7 +60,7 @@ const ArticleDetails = (props) => {
         return translationInfo
       })
 
-      console.log('Final translation parse: ', translations);
+      console.log('Final translation parse: ', newWordTranslations);
       setTranslations([newWordTranslations, ...translations])
       console.log('Translations state', translations);
     } else {
