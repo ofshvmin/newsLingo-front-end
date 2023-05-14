@@ -5,7 +5,7 @@ import styles from './ArticleBody.module.css'
 const ArticleBody = (props) => {
   return (
     <article>
-      {props.content}
+      <p>{props.content}</p>
     </article>
   )
 }

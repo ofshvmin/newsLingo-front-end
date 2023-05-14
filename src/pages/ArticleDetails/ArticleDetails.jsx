@@ -10,7 +10,7 @@ import articleImgPlaceholder from '../../assets/icons/no-image-icon.png'
 import * as articleService from '../../services/articleService'
 
 // pages
-// import Loading from "../Loading/Loading"
+import Loading from "../Loading/Loading"
 
 // components
 import ArticleHeader from "../../components/ArticleHeader/ArticleHeader"
@@ -32,22 +32,22 @@ const ArticleDetails = () => {
 
   if (!article) return <Loading />
 
-  // const creator = article.creator ? article.creator[0] : "NO CREATOR"
-  // const image_url = article.image_url ? article.image_url : articleImgPlaceholder
+  const creator = article.creator ? article.creator[0] : "NO CREATOR FOUND"
+  const image_url = article.image_url ? article.image_url : articleImgPlaceholder
 
   return (
     <main className={styles.container}>
       <article>
         <ArticleHeader 
           title={article.title}
-          // creator={creator} 
-          // pubDate={article.pubDate} 
-          // image_url={img}
-          // category={article.category}
+          creator={creator} 
+          pubDate={article.pubDate} 
+          category={article.category}
+          image_url={image_url}
         />
-        {/* <ArticleBody 
+        <ArticleBody 
           content={article.content}
-        /> */}
+        />
       </article>
 
     </main>
