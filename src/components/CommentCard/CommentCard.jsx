@@ -7,7 +7,7 @@ import AuthorInfo from "../AuthorInfo/AuthorInfo"
 // css
 import styles from './CommentCard.module.css'
 
-const CommentCard = ({comment, articleId, user}) => {
+const CommentCard = ({comment, articleId, user, handleDeleteComment}) => {
   return (
     <article>
       <header>
@@ -18,7 +18,7 @@ const CommentCard = ({comment, articleId, user}) => {
               <Link to={`/articles/${articleId}/comments/${comment._id}`} state={comment}>
                 Edit
               </Link>
-              <button>Delete</button>
+              <button onClick={()=> handleDeleteComment(articleId, comment._id)}>Delete</button>
             </>
           }
         </span>

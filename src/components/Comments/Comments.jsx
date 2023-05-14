@@ -14,6 +14,7 @@ const Comments = (props) => {
           comment={comment}
           user={props.user}
           articleId={props.articleId}
+          handleDeleteComment={props.handleDeleteComment}
         />
       ))}
     </>

@@ -39,6 +39,11 @@ const ArticleDetails = (props) => {
     setArticle({ ...article, comments: [...article.comments, newComment]})
   }
 
+  const handleDeleteComment = async (articleId, commentId) => {
+    await articleService.deleteComment(articleId, commentId)
+    setArticle({...article, comments: article.comments.filter(comment => comment._id !== commentId)})
+  }
+
   const handleFetchDefinition = async (query) => {
     const data = await wordService.getTranslationFromAPI(query.toLowerCase())
 
@@ -95,6 +100,7 @@ const ArticleDetails = (props) => {
           comments={article.comments} 
           user={props.user} 
           articleId={articleId}
+          handleDeleteComment={handleDeleteComment}
         />
       </section>
     </main>
