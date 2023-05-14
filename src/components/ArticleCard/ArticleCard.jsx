@@ -15,6 +15,7 @@ const ArticleCard = ({article}) => {
         <header>
           <h4>{creator}</h4>
           <h1>{article.title}</h1>
+          <p>{article.description}</p>
         </header>
           <img src={image_url} alt={article.title} />
       </article>
