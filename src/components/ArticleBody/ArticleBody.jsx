@@ -11,7 +11,8 @@ const ArticleBody = (props) => {
   const [words, setWords] = useState([])
 
   useEffect(() => {
-    setWords(props.content.split(' '))
+    //Found base regex here: https://stackoverflow.com/questions/650022/how-do-i-split-a-string-with-multiple-separators-in-javascript 
+    setWords(props.content.split(/([\s,.(...)?¿¡!;:"“”]+)/))
   }, [props.content])
 
   return (

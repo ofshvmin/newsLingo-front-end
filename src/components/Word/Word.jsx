@@ -9,11 +9,14 @@ const Word = (props) => {
   }
 
   return (
-    <span 
-      onClick={handleClick} 
-      className={styles.wordElement}
-    >
-      {props.word} </span>
+    <>
+      <span> </span>
+      <span 
+        onClick={handleClick} 
+        className={styles.wordElement}
+      >
+        {props.word}</span>
+    </>
   )
 }
 
