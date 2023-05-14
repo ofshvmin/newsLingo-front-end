@@ -10,7 +10,7 @@ const Comments = (props) => {
     <>
       {props.comments.map(comment => (
         <CommentCard
-          key={CommentCard._id}
+          key={comment._id}
           comment={comment}
           user={props.user}
         />
