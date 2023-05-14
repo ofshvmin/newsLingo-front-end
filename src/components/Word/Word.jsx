@@ -2,9 +2,18 @@
 // css
 import styles from './Word.module.css'
 
-const Word = () => {
-  return (
+const Word = (props) => {
 
+  const handleClick = () => {
+    console.log('Word is', props.word);
+  }
+
+  return (
+    <span 
+      onClick={handleClick} 
+      className={styles.wordElement}
+    >
+      {props.word} </span>
   )
 }
 
