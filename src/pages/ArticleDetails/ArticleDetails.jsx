@@ -71,6 +71,8 @@ const ArticleDetails = (props) => {
     } else {
       // merriam-webster returns alternative search suggestions when it can't find a given word
       console.log("Word not found. Alternate search suggestions:", data);
+      setTranslations([data, ...translations])
+
     }
   }
 
@@ -92,7 +94,7 @@ const ArticleDetails = (props) => {
         content={article.content}
         handleFetchDefinition={handleFetchDefinition}
       />
-      <WordLookup />
+      <WordLookup translations={translations}/>
       <section>
         <h1>Comments</h1>
         <NewComment handleAddComment={handleAddComment}/>
