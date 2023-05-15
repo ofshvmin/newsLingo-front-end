@@ -26,6 +26,17 @@ async function createWord(translationCardFormData) {
   }
 }
 
+async function indexDictionary() {
+  try {
+    const profileId = tokenService.getUserFromToken().profile
+    const res = await fetch(`${BASE_URL}/${profileId}/dictionary`, {
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}` }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 // template
 // async function show() {
@@ -42,5 +53,6 @@ async function createWord(translationCardFormData) {
 
 export {
   getTranslationFromAPI,
-  createWord
+  createWord,
+  indexDictionary,
 }
