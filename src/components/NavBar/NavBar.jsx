@@ -25,6 +25,10 @@ const NavBar = ({ user, handleLogout }) => {
   return (
     <nav className={styles.container}>
       <h2>NewsLingo</h2>
+      {user ?
+      <h4 id={styles.welcome}>Welcome back, {user.name}!</h4>
+      :
+    ''}
       {user ? 
         protectedLinks : publicLinks}
     </nav>
