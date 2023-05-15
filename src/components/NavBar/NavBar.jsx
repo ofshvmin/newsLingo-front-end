@@ -8,8 +8,8 @@ const NavBar = ({ user, handleLogout }) => {
 
   const publicLinks = (
     <ul>
-      <li><NavLink to="/auth/login">Log In</NavLink></li>
-      <li><NavLink to="/auth/signup">Sign Up</NavLink></li>
+      <NavLink id={styles.links} to="/auth/login"><li className={styles.mainNavBtns}>Log In</li></NavLink>
+      <NavLink id={styles.links} to="/auth/signup"><li id={styles.logout}>Sign Up</li></NavLink>
     </ul>
   )
 

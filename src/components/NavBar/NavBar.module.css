@@ -40,6 +40,7 @@ nav > h2 {
   border: solid white 2px;
   border-radius: 10px;
   padding: 8px 0;
+  transition: background-color 0.25s;
 }
 
 #logout {
@@ -55,7 +56,10 @@ nav > h2 {
 
 #logout:hover {
   background-color: gray;
-  border-color: gray;
+}
+
+.mainNavBtns:hover {
+  background-color: gray;
 }
 
 #links {
