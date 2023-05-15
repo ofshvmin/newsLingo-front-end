@@ -12,7 +12,6 @@ import { useState, useEffect } from 'react'
 
 
 const PersonalDictionary = (props) => {
-
   const [dictionary, setDictionary] = useState(null)
 
   useEffect(() => {
@@ -25,11 +24,20 @@ const PersonalDictionary = (props) => {
     if (props.user) fetchDictionary()
   }, [props.user])
 
+  const handleDeleteWord = async (wordId) => {
+    await wordService.deleteWord(wordId)
+    setDictionary(dictionary.filter(word => word._id !== wordId))
+  }
+
   return (
     <main className={styles.container}>
       {!dictionary ? 'No Words' :
         dictionary.map(word => (
-          <WordCard key={word._id} word={word}/>
+          <WordCard 
+            key={word._id} 
+            word={word}
+            handleDeleteWord={handleDeleteWord}
+          />
         ))
       }
     </main>
