@@ -1,14 +1,46 @@
-const BASE_URL = `${import.meta.env.VITE_BACK_END_SERVER_URL}/api/words/wordLookup`
+import * as tokenService from './tokenService'
+const BASE_URL = `${import.meta.env.VITE_BACK_END_SERVER_URL}/api/words`
 
 async function getTranslationFromAPI(query) {
   try {
-    const res = await fetch(`${BASE_URL}?query=${query}`)
+    const res = await fetch(`${BASE_URL}/wordLookup?query=${query}`)
     return res.json()
   } catch (err) {
     console.log(err);
   }
 }
 
+async function createWord(translationCardFormData) {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: "POST",
+      headers: { 
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json' 
+      },
+      body: JSON.stringify(translationCardFormData)
+          })
+      return res.json()
+  } catch(err) {
+    console.log(err)
+  }
+}
+
+
+// template
+// async function show() {
+//   try {
+//     const res = await fetch(BASE_URL, {
+//       headers: { 'Authorization': `Bearer ${tokenService.getToken()}` }
+//     })
+//     return res.json()
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+
+
 export {
   getTranslationFromAPI,
+  createWord
 }

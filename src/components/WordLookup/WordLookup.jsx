@@ -10,7 +10,11 @@ const WordLookup = (props) => {
   return (
     <aside className={styles.container}>
       {props.translations.map((translation, idx) =>
-        <TranslationCard key={idx} translation={translation}/>
+        <TranslationCard 
+          key={idx} 
+          translation={translation}
+          handleAddWord={props.handleAddWord}
+        />
       )}
     </aside>
   )
