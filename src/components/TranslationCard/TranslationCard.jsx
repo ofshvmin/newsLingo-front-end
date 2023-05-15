@@ -1,14 +1,7 @@
-import { useState } from 'react'
-
 // css
 import styles from './TranslationCard.module.css'
 
 const TranslationCard = (props) => {
-  // const [formData, setFormData] = useState({
-  //   word: '',
-  //   translation: [],
-  //   partOfSpeech: ''
-  // })
 
   console.log('Translation props', props);
   if(!props.translation[0].translations) return <p>No translation</p>
@@ -26,31 +19,28 @@ const handleSubmit = (evt) => {
 }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    // <div >
+      <form onSubmit={handleSubmit} className={styles.container}>
         <input 
           name="word"
-          type="text" 
+          // type="text"
           value={props.translation[0]?.queryWord}
-          disabled={true}
-          />
-        <textarea
-          name="translation" 
-          readOnly  
-          id="" 
-          cols="30" 
-          rows="10" 
-          value={translations}>
-        </textarea>
-        <input 
           readOnly
+        />
+        <textarea
+          name="translation"  
+          value={translations}
+          readOnly>
+        </textarea>
+        <input
           name="partOfSpeech"
-          type="text" 
+          // type="text" 
           value={props.translation[0]?.partOfSpeech}
+          readOnly
         />
         <button type="submit">Favorite</button>
       </form>
-    </div>
+    // </div>
   )
 }
 
