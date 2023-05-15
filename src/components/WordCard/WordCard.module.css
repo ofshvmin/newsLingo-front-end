@@ -1,0 +1,11 @@
+.container {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  
+}
+
+button {
+  width: 125px;
+}
