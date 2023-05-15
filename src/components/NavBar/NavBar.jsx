@@ -15,7 +15,7 @@ const NavBar = ({ user, handleLogout }) => {
 
   const protectedLinks = (
     <ul>
-      <li><NavLink to={`/words/${user.profile}/dictionary`}>My Dictionary</NavLink>
+      <li><NavLink to={`/words/${user?.profile}/dictionary`}>My Dictionary</NavLink>
       </li>
       <li><NavLink to="/articles">News</NavLink></li>
       <li><NavLink to="" onClick={handleLogout}>Log Out</NavLink></li>

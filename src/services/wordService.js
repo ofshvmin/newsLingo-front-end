@@ -38,6 +38,17 @@ async function indexDictionary() {
   }
 }
 
+async function deleteWord(wordId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${wordId}`, {
+      method: 'DELETE',
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}` }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
 // template
 // async function show() {
 //   try {
@@ -55,4 +66,5 @@ export {
   getTranslationFromAPI,
   createWord,
   indexDictionary,
+  deleteWord
 }
