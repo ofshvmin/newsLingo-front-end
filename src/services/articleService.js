@@ -41,6 +41,35 @@ async function createComment(articleId, commentFormData) {
   }
 }
 
+async function updateComment(articleId, commentId, commentFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${articleId}/comments/${commentId}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(commentFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+async function deleteComment(articleId, commentId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${articleId}/comments/${commentId}`, {
+      method: 'DELETE',
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}` }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
 // template
 // async function show() {
 //   try {
@@ -58,4 +87,6 @@ export {
   index,
   show,
   createComment,
+  updateComment,
+  deleteComment,
 }
