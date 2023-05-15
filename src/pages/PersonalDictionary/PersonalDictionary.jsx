@@ -12,7 +12,7 @@ import { useState, useEffect } from 'react'
 
 
 const PersonalDictionary = (props) => {
-  const [dictionary, setDictionary] = useState(null)
+  const [dictionary, setDictionary] = useState([])
 
   useEffect(() => {
     const fetchDictionary = async () => {
@@ -31,7 +31,7 @@ const PersonalDictionary = (props) => {
 
   return (
     <main className={styles.container}>
-      {!dictionary ? 'No Words' :
+      {!dictionary.length ? 'No Words' :
         dictionary.map(word => (
           <WordCard 
             key={word._id} 
