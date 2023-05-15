@@ -33,3 +33,5 @@ async function addPhoto(photoData) {
 }
 
 export { getAllProfiles, addPhoto }
+
+// export { getAllProfiles, addPhoto, indexDictionary }
