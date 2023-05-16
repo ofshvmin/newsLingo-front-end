@@ -42,7 +42,7 @@
   word-wrap: break-word; */
 }
 
-div > button {
+.translation div > button {
   width: 20px;
   height: 20px;
   padding: 0;
@@ -52,7 +52,7 @@ div > button {
   background-color: white;
 }
 
-div > button:hover {
+.translation div > button:hover {
   cursor: pointer;
 }
 
