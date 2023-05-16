@@ -10,7 +10,7 @@ const WordCard = ({word, handleDeleteWord}) => {
     setShowDefinition(!showDefinition)
   }
   return (
-    <div className={styles.container} onClick={handleWordCardClick}>
+    <div className={styles.container}  id={styles.flip} onClick={handleWordCardClick}>
       {/* <h1>{word.word}</h1>
       {word.translation.map((translation,idx) => 
         <h3 key={idx}>{translation}</h3>
@@ -19,7 +19,10 @@ const WordCard = ({word, handleDeleteWord}) => {
     {showDefinition ? 
       <>
       {word.translation.map((translation, idx) => 
-        <p key={idx}>{translation}</p>
+      <>
+        <h3 key={idx}>{translation}</h3>
+        <h4>({word.partOfSpeech})</h4>
+      </>
       )}
       </>   
       : 
@@ -27,7 +30,7 @@ const WordCard = ({word, handleDeleteWord}) => {
     
     <h1>{word.word}</h1>}
 
-      <button onClick={()=>handleDeleteWord(word._id)}>Delete</button>
+      <button onClick={()=>handleDeleteWord(word._id)}>❌</button>
       </div>
   )
 }
