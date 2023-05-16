@@ -1,7 +1,7 @@
 // css
 import styles from './WordCard.module.css'
 import { useState } from 'react'
-
+import Icon from '../Icon/Icon'
 
 const WordCard = ({word, handleDeleteWord}) => {
   const [showDefinition, setShowDefinition] = useState(false)
@@ -28,6 +28,7 @@ const WordCard = ({word, handleDeleteWord}) => {
         <h3 key={idx}>{translation}</h3>
         )}
       <h4>{word.partOfSpeech}</h4> */}
+        <img className="wordIcon" src="/src/assets/icons/flip.svg" alt="turn card" />
     {showDefinition ? 
       <>
       {word.translation.map((translation, idx) => 
@@ -38,9 +39,9 @@ const WordCard = ({word, handleDeleteWord}) => {
       )}
       </>   
       : 
-    
-    
-    <h1>{word.word}</h1>}
+      
+      
+      <h1>{word.word}</h1>}
 
       <button onClick={()=>handleDeleteWord(word._id)}>❌</button>
       </div>
