@@ -14,7 +14,7 @@ const ArticleCard = ({article}) => {
 
   return (  
     <Link to={`/articles/${article._id}`}>
-      <article className={styles.container}>
+      <article className={styles.articleCard}>
         <img src={image_url} alt={article.title} />
         <header>
           <h4>⏰ {article.pubDate.slice(0,10)}</h4>

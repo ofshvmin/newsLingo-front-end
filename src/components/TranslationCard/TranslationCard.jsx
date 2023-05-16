@@ -1,12 +1,14 @@
 // css
 import styles from './TranslationCard.module.css'
 
+// components
+// import Icon from "../Icon/Icon"
+
 const TranslationCard = (props) => {
 
   console.log('Translation props', props);
-  if(!props.translation[0].translations) return <p>No translation</p>
 
-  const translations = props.translation[0].translations.join(', ')
+  const translations = props.translation[0]?.translations?.join(', ')
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
@@ -19,31 +21,45 @@ const TranslationCard = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={styles.container}>
-      <input 
-        name="word"
-        value={props.translation[0]?.queryWord}
-        readOnly
-        className={styles.word}
-      />
-      <input
-        name="partOfSpeech"
-        value={props.translation[0]?.partOfSpeech}
-        readOnly
-        className={styles.partOfSpeech}
-      />
-      <textarea 
-        name="translation"
-        value={translations}
-        type="text"
-        readOnly
-        className={styles.translation}
-      >
-      </textarea>
-      <div className={styles.button}>
-        <button type="submit">❤️</button>
-      </div>
-    </form>
+    <main className={styles.container}>
+      {!props.translation.length ?
+        <p>No translation found.</p>
+        :
+      !props.translation[0]?.translations ?
+        <div className={styles.relatedWords}>
+          <p>No translation found.</p>
+          <p>Related words: {props.translation.filter((word, idx)=> idx<5).join(', ')}</p>
+        </div>
+      :
+        <form onSubmit={handleSubmit} >
+          <input 
+            name="word"
+            value={props.translation[0]?.queryWord}
+            readOnly
+            className={styles.word}
+          />
+          <input
+            name="partOfSpeech"
+            value={props.translation[0]?.partOfSpeech}
+            readOnly
+            className={styles.partOfSpeech}
+          />
+          <textarea 
+            name="translation"
+            value={translations}
+            type="text"
+            readOnly
+            className={styles.translation}
+          >
+          </textarea>
+          <div className={styles.button}>
+            {/* <button type="submit"><Icon category="Favorite"/></button> */}
+            <button type="submit">❤️</button>
+          </div>
+        </form>
+      
+    }
+    </main>
   )
 }
 

@@ -1,10 +1,11 @@
 // assets
-import favorite from '../../assets/icons/favorites.svg'
-
+import favorite from '../../assets/icons/favorite.svg'
 
 const Icon = ({ category }) => {
   const icons = {
     Favorite: favorite,
+
+    
   }
 
   return (

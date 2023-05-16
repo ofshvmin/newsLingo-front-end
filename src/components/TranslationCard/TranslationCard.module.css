@@ -6,42 +6,63 @@
   margin: 15px;
   border-radius: var(--border-radius);
   position: relative;
+  color: black;
 }
 
 .container * {
   margin: 0;
   border: 0;
-  padding: 0 10px 0 10px;
-  background-color:transparent;
   font-family: var(--font);
   font-size: 14px;
-  /* overflow-wrap:break-word; */
 }
 
-.container .word {
+.word {
   margin: 10px 0 5px 0;
+  padding: 0 10px 0 10px;
   font-weight: 800;
+  background-color:transparent;
 }
 
-.container .partOfSpeech {
+.partOfSpeech {
   font-style: italic;
+  padding: 0 10px 0 10px;
   margin-left: 10px;
+  background-color:transparent;
 }
 
-.container .translation {
-  width: 100%;
+.translation {
+  /* width: 100%; */
+  padding: 0 10px 0 10px;
   resize: none;
   margin-bottom: 10px;
   margin-left: 10px;
+  background-color:transparent;
   /* overflow-y: auto;
   overflow: hidden;
   word-wrap: break-word; */
 }
 
-.container .button {
+div > button {
   width: 20px;
+  height: 20px;
+  padding: 0;
   position: absolute;
-
   top: -10px;
-  right: 10px;
+  right: 0px;
+  background-color: white;
+}
+
+div > button:hover {
+  cursor: pointer;
+}
+
+/* div > button > img {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+} */
+
+.relatedWords {
+  padding: 0 10px 0 10px;
+  margin: 10px 0;
 }
