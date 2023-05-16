@@ -1,5 +1,6 @@
 // css
 import styles from './TranslationCard.module.css'
+
 // components
 // import Icon from "../Icon/Icon"
 
@@ -69,9 +70,11 @@ const TranslationCard = (props) => {
           className={styles.translation}
         >
         </textarea>
-        <div className={styles.button}>
+        <div className={styles.favorite}>
           {/* <button type="submit"><Icon category="Favorite"/></button> */}
-          <button type="submit">❤️</button>
+          <button type="submit">
+            <img className="wordIcon" id="favorite" src="/src/assets/icons/favorite.svg" alt="a heart icon" />
+          </button>
         </div>
       </form>
     </main>
