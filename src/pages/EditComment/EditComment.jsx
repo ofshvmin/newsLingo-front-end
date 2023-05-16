@@ -26,7 +26,7 @@ const EditComment = () => {
   }
 
   return (
-    <main className={styles.container}>
+    <main className={styles.editComment}>
       <form onSubmit={handleSubmit}>
         <h1>Edit Comment</h1>
         <textarea
