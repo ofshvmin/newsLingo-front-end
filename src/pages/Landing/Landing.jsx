@@ -9,7 +9,7 @@ const Landing = () => {
     <main className={styles.landingContainer}>
       <section className={styles.splash}>
         <img src={logo2} alt="NewsLingo" />
-        <h1> Breaking News, Breaking Barriers </h1>
+        <h1 className={styles.slogan}> Breaking News, Breaking Barriers </h1>
       </section>
 
       <section className={styles.about}>
