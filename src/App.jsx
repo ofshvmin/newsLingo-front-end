@@ -20,6 +20,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 // services
 import * as authService from './services/authService'
 import * as articleService from './services/articleService'
+import * as wordService from './services/wordService'
 import * as profileService from './services/profileService'
 
 // styles
@@ -28,9 +29,9 @@ import './App.css'
 function App() {
   const [user, setUser] = useState(authService.getUser())
   const [articles, setArticles] = useState([])
-  // const [dictionary, setDictionary] = useState([])
+  const [dictionary, setDictionary] = useState([])
   const navigate = useNavigate()
-
+  
   useEffect(()=> {
     const fetchArticles = async () => {
       const data = await articleService.index()
@@ -38,15 +39,24 @@ function App() {
     }
     if (user) fetchArticles()
   }, [user])
+  
+  useEffect(() => {
+    const fetchDictionary = async () => {
+      const data = await wordService.indexDictionary()
+      setDictionary(data)
+    }
+    if (user) fetchDictionary()
+  }, [user])
+  
+    const handleDeleteWord = async (wordId) => {
+      await wordService.deleteWord(wordId)
+      setDictionary(dictionary.filter(word => word._id !== wordId))
+    }
 
-  // useEffect(()=> {
-  //   const fetchDictionary = async () => {
-  //     const data = await profileService.indexDictionary()
-  //     setDictionary(data)
-  //     console.log(data)
-  //   }
-  //   if (user) fetchDictionary()
-  // }, [user, dictionary])
+    const handleAddWord = async (translationCardFormData) => {
+      const data = await wordService.createWord(translationCardFormData)
+      setDictionary([...dictionary, data])
+    }
 
   const handleLogout = () => {
     authService.logout()
@@ -69,15 +79,20 @@ function App() {
               <ArticleList articles={articles} />
             </ProtectedRoute>
           }
-        />
+          />
         <Route
           path='/articles/:articleId'
           element={
             <ProtectedRoute user={user}>
-              <ArticleDetails user={user}/>
+              <ArticleDetails 
+                user={user}
+                handleDeleteWord={handleDeleteWord}
+                handleAddWord={handleAddWord}
+                dictionary={dictionary}
+                />
             </ProtectedRoute>
           }
-        />
+          />
         <Route
           path='/articles/:articleId/comments/:commentId'
           element={
@@ -85,19 +100,23 @@ function App() {
               <EditComment/>
             </ProtectedRoute>
           }
-        /> 
+          /> 
         <Route 
           path='/' 
           element={<Landing user={user} />} 
-        />
+          />
         <Route
           path='/words/:profileId/dictionary'
           element={
             <ProtectedRoute user={user}>
-              <PersonalDictionary user={user} />
+              <PersonalDictionary 
+                user={user} 
+                handleDeleteWord={handleDeleteWord}
+                dictionary={dictionary}
+                />
             </ProtectedRoute>
           }
-        />
+          />
         <Route
           path='/profiles'
           element={
