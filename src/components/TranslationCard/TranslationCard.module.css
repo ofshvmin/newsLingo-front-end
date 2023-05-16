@@ -44,10 +44,7 @@
   width: fit-content;
 }
 
-/* .translationCard > .relatedWords {
-  background-color: white;
-} */
-.translationCard div > button {
+.translation div > button {
   width: 20px;
   height: 20px;
   padding: 0;
@@ -57,7 +54,7 @@
   background-color: white;
 }
 
-.translationCard > div > button:hover {
+.translation div > button:hover {
   cursor: pointer;
 }
 
