@@ -28,7 +28,7 @@ const NavBar = ({ user, handleLogout }) => {
   )
 
   return (
-    <nav className={styles.container}>
+    <nav className={styles.navContainer}>
       <h2>NewsLingo</h2>
       {user ? 
         protectedLinks : publicLinks}
