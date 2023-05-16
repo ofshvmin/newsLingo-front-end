@@ -8,16 +8,16 @@ const TranslationCard = (props) => {
 
   console.log('Translation props', props);
 
-  //clean up object
-  // if (props.translation.trans)
-  const translations = props.translation[0]?.translations?.join(', ')
+  // const translations = props.translation[0]?.translations?.join(', ')
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
     const formData = {
       word: props.translation[0]?.queryWord,
-      translation: translations,
-      partOfSpeech: props.translation[0]?.partOfSpeech
+      translation: props.translation.map(t => t.translations.join(', ')),
+      // translation: translations
+      partOfSpeech: props.translation.map(t => t.partOfSpeech),
+      // partOfSpeech: props.translation[0]?.partOfSpeech
     }
     props.handleAddWord(formData)
   }
@@ -32,9 +32,8 @@ const TranslationCard = (props) => {
         :
         !props.translation[0]?.translations ?
           <div className={styles.relatedWords}>
-            <p>No translation found.</p>
-            <p>Word found but only related words.</p>
-            <p><span>Related words:</span> {props.translation.filter((word, idx)=> idx<5).join(', ')}</p>
+            <p>No translation found but view <span>related words:</span></p>
+            <p>{props.translation.filter((word, idx)=> idx<5).join(', ')}</p>
           </div>
           :
           !props.translation[0].translations.length ?
@@ -58,7 +57,7 @@ const TranslationCard = (props) => {
               />
               <textarea 
                 name="translation"
-                value={translations}
+                value={props.translation[0]?.translations?.join(', ')}
                 type="text"
                 readOnly
                 className={styles.translation}
