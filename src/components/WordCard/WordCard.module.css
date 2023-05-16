@@ -1,4 +1,4 @@
-/* .container {
+.container {
   display: flex;
   overflow-wrap: break-word;
   position: relative;
@@ -63,4 +63,4 @@ button {
   100% {
       transform: rotateX(0deg);
   }
-} */
+}
