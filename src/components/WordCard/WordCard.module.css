@@ -1,0 +1,66 @@
+.wordContainer {
+  display: flex;
+  overflow-wrap: break-word;
+  position: relative;
+  inline-size: 200px;
+  block-size: 200px;
+  text-align: center;
+  flex-direction: column;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  
+}
+
+.wordContainer > h1 {
+  display: flex;
+  min-width: 200px;
+  align-content: center;
+  justify-content: center;
+}
+
+.wordContainer > h3 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-items: center;
+  
+}
+.wordContainer > h4 {
+  display: flex;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.wordContainer > button {
+  width: 10px;
+  height: 10px;
+  background: none;
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: 15px;
+
+}
+
+
+#flip {
+  animation: 0.5s linear flipping; 
+}
+
+@keyframes flipping {
+  0% {
+      transform: rotateY(0deg);
+  }
+  50% {
+      transform: rotateY(90deg);
+  }    
+  100% {
+      transform: rotateY(0deg);
+  }
+}

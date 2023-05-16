@@ -30,7 +30,7 @@ const PersonalDictionary = (props) => {
   }
 
   return (
-    <main className={styles.container}>
+    <main className={styles.dictionaryContainer}>
       {!dictionary.length ? 'No Words' :
         dictionary.map(word => (
           <WordCard 

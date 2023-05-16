@@ -9,4 +9,13 @@
 
 .articleHeader h1 {
   margin: 30px 0;
+  font-size: 40px;
+}
+
+.articleHeader h3 {
+  font-size: 25px;
+}
+
+.articleHeader h4 {
+  font-size: 20px;
 }
