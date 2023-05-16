@@ -44,7 +44,7 @@
   width: fit-content;
 }
 
-.translationCard> form> div > button {
+.translation div > button {
   width: 20px;
   height: 20px;
   padding: 0;
@@ -54,13 +54,7 @@
   background-color: white;
 }
 
-.translationCard> form> div > button:hover {
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
-}
-
-.translationCard> form> div > button:hover {
+.translation div > button:hover {
   cursor: pointer;
 }
 

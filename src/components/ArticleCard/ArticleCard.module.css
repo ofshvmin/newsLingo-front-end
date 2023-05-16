@@ -22,12 +22,12 @@
   gap: 10px;
 }
 
-.articleCardHeader h1 {
+.articleCard header h1 {
   font-size: 20px;
   margin: 5px 0;
 }
 
-.articleCardHeader h4 {
+.articleCard header h4 {
   margin: 5px 0;
 }
 
