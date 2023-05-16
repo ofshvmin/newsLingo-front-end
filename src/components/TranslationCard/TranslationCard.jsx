@@ -1,13 +1,10 @@
 // css
 import styles from './TranslationCard.module.css'
-
 // components
 // import Icon from "../Icon/Icon"
 
 const TranslationCard = (props) => {
-
-  console.log('Translation props', props);
-
+  
   const translations = props.translation[0]?.translations?.join(', ')
 
   const handleSubmit = (evt) => {
