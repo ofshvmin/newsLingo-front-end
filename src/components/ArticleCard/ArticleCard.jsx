@@ -16,7 +16,7 @@ const ArticleCard = ({article}) => {
     <Link to={`/articles/${article._id}`}>
       <article className={styles.articleCard}>
         <img src={image_url} alt={article.title} />
-        <header>
+        <header className={styles.articleCardHeader}>
           <h4>⏰ {article.pubDate.slice(0,10)}</h4>
           {country.length ? 
           <h4>{country.toUpperCase()}</h4>

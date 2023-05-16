@@ -22,16 +22,16 @@
   gap: 10px;
 }
 
-header h1 {
+.articleCardHeader h1 {
   font-size: 20px;
   margin: 5px 0;
 }
 
-header h4 {
+.articleCardHeader h4 {
   margin: 5px 0;
 }
 
-header > p {
+.articleCardHeader > p {
   margin: 5px 0;
   overflow: hidden;
   text-overflow: ellipsis;
