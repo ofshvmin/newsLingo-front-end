@@ -19,7 +19,7 @@
 .landingContainer section > img {
   width: 50%;
   min-width: 460px;
-  margin-top: 25px; 
+  margin: 50px 0; 
   /* margin-bottom: 80px; */
 }
 
@@ -86,7 +86,7 @@
 }
 
 .summary {
-  height: 400px;
+  height: 100%;
   background-image: url('../../assets/images/success.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -105,7 +105,9 @@
 
 .landingContainer .summary article {
   background-color: rgba(0,0,0,0.65);
+  width: 80%;
   border-radius: 10px;
+  margin-bottom: 50px;
 }
 
 .landingContainer article header {
@@ -116,10 +118,14 @@
   justify-content: center;
 }
 
+.summary article ul {
+  padding: 0 20px 0 20px;
+}
+
 .summary article li {
   font-size: 20px;
   list-style-type: none;
-  line-height: 28px;
+  line-height: 30px;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -150,7 +156,7 @@
     /* height: 320px; */
   }
   .summary {
-    height: 450px;
+    /* height: 450px; */
   }
 } 
 
@@ -159,7 +165,7 @@
     /* height: 460px; */
   }
   .summary {
-    height: 600px;
+    /* height: 600px; */
   }
 } 
 
@@ -168,7 +174,7 @@
     /* height: 560px; */
   }
   .summary {
-    height: 700px;
+    /* height: 700px; */
   }
 } 
 
