@@ -12,12 +12,13 @@ const ArticleCard = ({article}) => {
   return (  
     <Link to={`/articles/${article._id}`}>
       <article className={styles.container}>
+        <img src={image_url} alt={article.title} />
         <header>
+          <h4>⏰ {article.pubDate.slice(0,10)}</h4>
           <h4>{creator}</h4>
           <h1>{article.title}</h1>
           <p>{article.description}</p>
         </header>
-          <img src={image_url} alt={article.title} />
       </article>
     </Link>
   )
