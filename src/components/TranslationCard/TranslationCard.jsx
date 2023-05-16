@@ -2,6 +2,7 @@
 import styles from './TranslationCard.module.css'
 
 // components
+import Word from '../Word/Word'
 // import Icon from "../Icon/Icon"
 
 const TranslationCard = (props) => {
