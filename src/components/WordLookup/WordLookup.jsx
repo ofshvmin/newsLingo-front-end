@@ -14,6 +14,7 @@ const WordLookup = (props) => {
           key={idx} 
           translation={translation}
           handleAddWord={props.handleAddWord}
+          dictionary={props.dictionary}
         />
       )}
     </aside>

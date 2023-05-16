@@ -32,6 +32,7 @@ function App() {
   const [dictionary, setDictionary] = useState([])
   const navigate = useNavigate()
   
+
   useEffect(()=> {
     const fetchArticles = async () => {
       const data = await articleService.index()
