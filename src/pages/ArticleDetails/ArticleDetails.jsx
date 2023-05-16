@@ -55,7 +55,11 @@ const ArticleDetails = (props) => {
     // If API has a translation...
     if(data[0].hwi) {
       // filter out unrelated translations (merriam-webster was sometimes giving additional translations for unrelated words)
-      const filteredData = data.filter(element => element.meta.stems.includes(query.toLowerCase()) && element.meta.lang === 'es')
+      const noAccentQuery = query.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+
+      console.log('No accent query', noAccentQuery);
+
+      const filteredData = data.filter(element => (element.meta.stems.includes(query.toLowerCase()) || element.meta.stems.includes(noAccentQuery)) && element.meta.lang === 'es')
 
       console.log("First filter", filteredData);
       
