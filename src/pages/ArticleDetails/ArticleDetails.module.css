@@ -1,4 +1,4 @@
-.container {
+.articleDetails {
   margin: var(--page-margin);
   display: grid;
   grid-template-areas: 
@@ -9,6 +9,6 @@
   /* grid-template-rows: 1fr 2fr; */
 }
 
-.container section {
+.articleDetails section {
   grid-area: comments;
 }

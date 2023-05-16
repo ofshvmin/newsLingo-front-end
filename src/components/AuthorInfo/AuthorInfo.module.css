@@ -1,14 +1,14 @@
-.container {
+.authorInfo {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.container * {
+.authorInfo * {
   margin: 0;
 }
 
-.container > img {
+.authorInfo > img {
   width: 32px;
   height: 32px;
   object-fit: cover;
@@ -17,11 +17,11 @@
   background-color: var(--navBar-color);
 }
 
-.container h4 {
+.authorInfo h4 {
   opacity: 0.75;
 }
 
-.container section {
+.authorInfo section {
   display: flex;
   flex-direction: column;
 }

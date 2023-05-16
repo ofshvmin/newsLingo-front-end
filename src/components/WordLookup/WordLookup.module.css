@@ -1,4 +1,4 @@
-.container {
+.wordLookup {
   grid-area: aside;
   background-color: #22262e;
   border-radius: 10px;
@@ -6,6 +6,6 @@
   width: 275px;
 
 }
-.container p {
+.wordLookup p {
   margin:0;
 }

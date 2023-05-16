@@ -21,7 +21,7 @@ const TranslationCard = (props) => {
   }
 
   return (
-    <main className={styles.container}>
+    <main className={styles.translationCard}>
       {!props.translation.length ?
         <p>No translation found.</p>
         :

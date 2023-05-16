@@ -1,4 +1,4 @@
-.container {
+.newComment {
   grid-area: comments;
   display: flex;
   flex-direction: row;
@@ -11,13 +11,13 @@
   -webkit-box-shadow: none;
 }
 
-/* .container h3 {
+/* .newComment h3 {
   margin: 0;
   color: black;
 } */
 
-/* .container input, .container textarea {  */
-.container textarea { 
+/* .newComment input, .newComment textarea {  */
+.newComment textarea { 
   width: 100%;
   padding: 15px;
   font-size: 14px;
@@ -28,18 +28,18 @@
   font-family: var(--font-family);
 }
 
-.container textarea {
+.newComment textarea {
   min-height: 50px;
 }
 
-.container button {
+.newComment button {
   margin: 0;
   color: white;
   font-weight: 600;
   background: #00a0df;
 }
 
-.container button[type="submit"] {
+.newComment button[type="submit"] {
   width: 40px;
   height: 40px;
   display: flex;
@@ -50,11 +50,11 @@
   width: 50px;
 }
 
-.container button[type="submit"]:hover {
+.newComment button[type="submit"]:hover {
   cursor: pointer;
 }
 
-/* .container button[type="submit"] img {
+/* .newComment button[type="submit"] img {
   width: 18px;
   height: 18px;
 } */

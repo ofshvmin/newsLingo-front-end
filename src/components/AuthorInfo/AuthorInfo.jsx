@@ -12,7 +12,7 @@ const AuthorInfo = ({ content }) => {
   const photo = content.author.photo ? content.author.photo : profileImg
 
   return (
-    <div className={styles.container}>
+    <div className={styles.authorInfo}>
       <img src={photo} alt="The user's avatar" />
       <section>
         <h4>{content.author.name}</h4>
