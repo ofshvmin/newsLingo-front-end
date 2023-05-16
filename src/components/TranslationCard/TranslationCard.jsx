@@ -8,17 +8,14 @@ const TranslationCard = (props) => {
 
   console.log('Translation props', props);
 
-  // const translations = props.translation[0]?.translations?.join(', ')
-
   const handleSubmit = (evt) => {
     evt.preventDefault()
     const formData = {
       word: props.translation[0]?.queryWord,
       translation: props.translation.map(t => t.translations.join(', ')),
-      // translation: translations
       partOfSpeech: props.translation.map(t => t.partOfSpeech),
-      // partOfSpeech: props.translation[0]?.partOfSpeech
     }
+    console.log('FORM DATA:',formData)
     props.handleAddWord(formData)
   }
 
