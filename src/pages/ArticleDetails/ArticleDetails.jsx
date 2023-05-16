@@ -38,9 +38,9 @@ const ArticleDetails = (props) => {
     const newComment = await articleService.createComment(articleId, commentFormData)
     setArticle({ ...article, comments: [...article.comments, newComment]})
   }
-  const handleAddWord = async (translationCardFormData) => {
-    await wordService.createWord(translationCardFormData)
-  }
+  // const handleAddWord = async (translationCardFormData) => {
+  //   await wordService.createWord(translationCardFormData)
+  // }
 
   const handleDeleteComment = async (articleId, commentId) => {
     await articleService.deleteComment(articleId, commentId)
@@ -103,7 +103,7 @@ const ArticleDetails = (props) => {
       />
       <WordLookup 
         translations={translations}
-        handleAddWord={handleAddWord}
+        handleAddWord={props.handleAddWord}
       />
       <section>
         <h1>Comments</h1>
