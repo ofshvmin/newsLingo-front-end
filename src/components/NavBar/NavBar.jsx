@@ -29,7 +29,8 @@ const NavBar = ({ user, handleLogout }) => {
 
   return (
     <nav className={styles.navContainer}>
-      <h2>NewsLingo</h2>
+      <NavLink id={styles.links} to={`/`}><h2>NewsLingo</h2></NavLink>
+
       {user ? 
         protectedLinks : publicLinks}
     </nav>
