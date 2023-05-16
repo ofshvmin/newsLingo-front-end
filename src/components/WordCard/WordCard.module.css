@@ -38,14 +38,14 @@
   min-width: 200px;
 }
 
-.wordContainer > button {
+ .wordContainer > button {
   width: 10px;
   height: 10px;
   background: none;
-  color: white;
+  /* color: white; */
   position: absolute;
-  top: -5px;
-  right: 15px;
+  top: -20px;
+  right: 30px;
 }
 
 .wordContainer > img {
