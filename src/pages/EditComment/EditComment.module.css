@@ -1,4 +1,4 @@
-.container {
+.editComment {
   height: 100%;
   display: flex;
   overflow: hidden;
@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-.container textarea, button { 
+.editComment > textarea, .editComment > .button { 
   width: 100%;
   padding: 14px;
   font-size: 14px;
@@ -18,7 +18,7 @@
   font-family: var(--font-family);
 }
 
-.container button {
+.editComment > button {
   color: white;
   /* font-weight: 600; */
   /* margin: 21px 0px 0px 0px; */

@@ -1,11 +1,13 @@
 .wordLookup {
   grid-area: aside;
-  background-color: #22262e;
+  background-color: var(--sideBar-color);
   border-radius: 10px;
   padding: 15px;
   width: 275px;
 
 }
-.wordLookup p {
-  margin:0;
+
+.wordLookup main:not(:first-child) {
+  opacity: 0.5;
 }
+
