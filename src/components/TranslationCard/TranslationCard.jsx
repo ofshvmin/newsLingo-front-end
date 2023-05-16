@@ -4,9 +4,6 @@ import styles from './TranslationCard.module.css'
 // import Icon from "../Icon/Icon"
 
 const TranslationCard = (props) => {
-  
-  const translations = props.translation[0]?.translations?.join(', ')
-
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
