@@ -1,4 +1,4 @@
-.container {
+.wordContainer {
   display: flex;
   overflow-wrap: break-word;
   position: relative;
@@ -16,14 +16,14 @@
   
 }
 
-h1 {
+.wordContainer > h1 {
   display: flex;
   min-width: 200px;
   align-content: center;
   justify-content: center;
 }
 
-h3 {
+.wordContainer > h3 {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -31,13 +31,13 @@ h3 {
   align-items: center;
   
 }
-h4 {
+.wordContainer > h4 {
   display: flex;
   justify-content: center;
   min-width: 200px;
 }
 
-button {
+.wordContainer > button {
   width: 10px;
   height: 10px;
   background: none;

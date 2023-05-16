@@ -10,7 +10,7 @@ const WordCard = ({word, handleDeleteWord}) => {
     setShowDefinition(!showDefinition)
   }
   return (
-    <div className={styles.container}  id={styles.flip} onClick={handleWordCardClick}>
+    <div className={styles.wordContainer}  id={styles.flip} onClick={handleWordCardClick}>
       {/* <h1>{word.word}</h1>
       {word.translation.map((translation,idx) => 
         <h3 key={idx}>{translation}</h3>
