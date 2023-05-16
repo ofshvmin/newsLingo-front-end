@@ -85,7 +85,7 @@ const ArticleDetails = (props) => {
   const image_url = article.image_url ? article.image_url : articleImgPlaceholder
 
   return (
-    <main className={styles.container}>
+    <main className={styles.articleDetails}>
       <ArticleHeader 
         title={article.title}
         creator={creator} 

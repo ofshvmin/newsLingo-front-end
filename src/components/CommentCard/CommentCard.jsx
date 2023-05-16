@@ -9,7 +9,7 @@ import styles from './CommentCard.module.css'
 
 const CommentCard = ({comment, articleId, user, handleDeleteComment}) => {
   return (
-    <article className={styles.container}>
+    <article className={styles.commentCard}>
       <header>
         <span>
           <AuthorInfo content={comment} />
