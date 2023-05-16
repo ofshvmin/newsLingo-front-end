@@ -19,7 +19,7 @@ const ArticleBody = (props) => {
   }, [props.content])
 
   return (
-    <article className={styles.container}>
+    <article className={styles.articleBody}>
       {words.map((word, idx) => {
         if(word.includes('"')) isStartQuote = true;
         else isStartQuote = false;

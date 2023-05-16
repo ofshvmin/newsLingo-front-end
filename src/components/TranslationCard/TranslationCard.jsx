@@ -1,56 +1,65 @@
-import { useState } from 'react'
-
 // css
 import styles from './TranslationCard.module.css'
 
+// components
+// import Icon from "../Icon/Icon"
+
 const TranslationCard = (props) => {
-  // const [formData, setFormData] = useState({
-  //   word: '',
-  //   translation: [],
-  //   partOfSpeech: ''
-  // })
 
   console.log('Translation props', props);
-  if(!props.translation[0].translations) return <p>No translation</p>
 
-  const translations = props.translation[0].translations.join('\n')
+  const translations = props.translation[0]?.translations?.join(', ')
 
-const handleSubmit = (evt) => {
-  evt.preventDefault()
-  const formData = {
-    word: props.translation[0]?.queryWord,
-    translation: translations,
-    partOfSpeech: props.translation[0]?.partOfSpeech
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+    const formData = {
+      word: props.translation[0]?.queryWord,
+      translation: translations,
+      partOfSpeech: props.translation[0]?.partOfSpeech
+    }
+    props.handleAddWord(formData)
   }
-  props.handleAddWord(formData)
-}
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input 
-          name="word"
-          type="text" 
-          value={props.translation[0]?.queryWord}
-          disabled={true}
+    <main className={styles.translationCard}>
+      {!props.translation.length ?
+        <p>No translation found.</p>
+        :
+      !props.translation[0]?.translations ?
+        <div className={styles.relatedWords}>
+          <p>No translation found.</p>
+          <p>Related words: {props.translation.filter((word, idx)=> idx<5).join(', ')}</p>
+        </div>
+      :
+        <form onSubmit={handleSubmit} >
+          <input 
+            name="word"
+            value={props.translation[0]?.queryWord}
+            readOnly
+            className={styles.word}
           />
-        <textarea
-          name="translation" 
-          readOnly  
-          id="" 
-          cols="30" 
-          rows="10" 
-          value={translations}>
-        </textarea>
-        <input 
-          readOnly
-          name="partOfSpeech"
-          type="text" 
-          value={props.translation[0]?.partOfSpeech}
-        />
-        <button type="submit">Favorite</button>
-      </form>
-    </div>
+          <input
+            name="partOfSpeech"
+            value={props.translation[0]?.partOfSpeech}
+            readOnly
+            className={styles.partOfSpeech}
+          />
+          <textarea 
+            name="translation"
+            value={translations}
+            type="text"
+            readOnly
+            className={styles.translation}
+          >
+          </textarea>
+          <div className={styles.button}>
+            {/* <button type="submit"><Icon category="Favorite"/></button> */}
+            <button type="submit">❤️</button>
+          </div>
+        </form>
+      
+    }
+    </main>
   )
 }
 

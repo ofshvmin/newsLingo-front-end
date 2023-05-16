@@ -1,5 +1,6 @@
 .wordElement:hover {
-  background-color: yellow;
+  background-color: #FFBA08;
   color: black;
   cursor: pointer;
+  border-radius: 3px;
 }
