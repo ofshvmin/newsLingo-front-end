@@ -43,7 +43,7 @@
   background: none;
   color: white;
   position: absolute;
-  top: -10px;
+  top: -5px;
   right: 15px;
 
 }
@@ -55,12 +55,12 @@
 
 @keyframes flipping {
   0% {
-      transform: rotateX(0deg);
+      transform: rotateY(0deg);
   }
   50% {
-      transform: rotateX(90deg);
+      transform: rotateY(90deg);
   }    
   100% {
-      transform: rotateX(0deg);
+      transform: rotateY(0deg);
   }
 }

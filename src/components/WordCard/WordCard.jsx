@@ -5,12 +5,24 @@ import { useState } from 'react'
 
 const WordCard = ({word, handleDeleteWord}) => {
   const [showDefinition, setShowDefinition] = useState(false)
+  const [flipCard, setFlipCard] = useState(false)
+
+
+  
+  const triggerAnimation = () => {
+    setFlipCard(true)
+    setTimeout(() => {
+      setFlipCard(false)
+    }, 500)
+
+  }
 
   const handleWordCardClick = () => {
+    triggerAnimation()
     setShowDefinition(!showDefinition)
   }
   return (
-    <div className={styles.wordContainer}  id={styles.flip} onClick={handleWordCardClick}>
+    <div className={styles.wordContainer}  id={ flipCard ? styles.flip : "" } onClick={handleWordCardClick}>
       {/* <h1>{word.word}</h1>
       {word.translation.map((translation,idx) => 
         <h3 key={idx}>{translation}</h3>
