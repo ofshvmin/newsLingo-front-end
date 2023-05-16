@@ -1,23 +1,15 @@
 .newComment {
   grid-area: comments;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   align-items: center;
-  max-width: 100%;
-  /* padding: 0; */
-  /* border: none; */
+  max-width: 75%;
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
 }
 
-/* .newComment h3 {
-  margin: 0;
-  color: black;
-} */
-
-/* .newComment input, .newComment textarea {  */
-.newComment textarea { 
+.newComment > textarea { 
   width: 100%;
   padding: 15px;
   font-size: 14px;
@@ -29,7 +21,7 @@
 }
 
 .newComment textarea {
-  min-height: 50px;
+  /* min-height: 50px; */
 }
 
 .newComment button {

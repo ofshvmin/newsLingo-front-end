@@ -10,4 +10,5 @@
 
 .articleDetails section {
   grid-area: comments;
+  margin-top: 50px;
 }
