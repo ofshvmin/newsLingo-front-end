@@ -47,14 +47,15 @@ function App() {
     if (user) fetchDictionary()
   }, [user])
   
+  const handleAddWord = async (translationCardFormData) => {
+    const data = await wordService.createWord(translationCardFormData)
+    await setDictionary([...dictionary, data])
+    console.log(dictionary);
+  }
+
   const handleDeleteWord = async (wordId) => {
     await wordService.deleteWord(wordId)
     setDictionary(dictionary.filter(word => word._id !== wordId))
-  }
-
-  const handleAddWord = async (translationCardFormData) => {
-    const data = await wordService.createWord(translationCardFormData)
-    setDictionary([...dictionary, data])
   }
 
   const handleLogout = () => {

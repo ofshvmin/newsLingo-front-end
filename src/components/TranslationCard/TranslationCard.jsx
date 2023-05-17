@@ -12,26 +12,40 @@ const TranslationCard = (props) => {
   const handleSubmit = (evt) => {
     evt.preventDefault()
     
-      
-    if(favorite) {
-
     const formData = {
       word: props.translation[0]?.queryWord,
       translation: props.translation.map(t => t.translations.join(', ')),
       partOfSpeech: props.translation.map(t => t.partOfSpeech),
-    }
-    console.log('FORM DATA:',formData)
-    props.handleAddWord(formData)
-    setFavorite(!favorite)
-    console.log(props.dictionary);
-  } else {
-    props.handleDeleteWord(wordId)
-    setFavorite(!favorite)
-
-    }
+    }      
+    if(!favorite) {
+      console.log('FORM DATA:',formData)
+      props.handleAddWord(formData)
+      setFavorite(!favorite)
+    } else {
+      let word = props.dictionary.find(fav => fav.word === formData.word)
+      let wordId = word._id
+      props.handleDeleteWord(wordId)
+      setFavorite(!favorite)
   }
   
-  
+}
+
+
+
+
+      
+// props.dictionary.find((fav) => {
+//         fav.word === formData.word
+//         console.log(fav.word)
+
+
+      
+// props.handleDeleteWord()
+
+
+
+
+
 
   const hasData = !!props.translation.length
   if(!hasData) return (
