@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 // assets
 import favoriteIcon from '../../assets/icons/favorite.svg'
@@ -82,7 +82,7 @@ const TranslationCard = (props) => {
   return (
     <main className={styles.translationCard}>
       <form onSubmit={handleSubmit} >
-        {finalTranslations.map((translation, idx) => (
+        {finalTranslations.map((translation) => (
           <>
             <input 
               name="word"
