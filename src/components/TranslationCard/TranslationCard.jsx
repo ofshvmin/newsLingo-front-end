@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 
+// assets
+import favoriteIcon from '../../assets/icons/favorite.svg'
+import favorited from '../../assets/icons/favorited.svg'
+
 // css
 import styles from './TranslationCard.module.css'
 
@@ -105,9 +109,9 @@ const TranslationCard = (props) => {
         <div className={styles.favorite}>
           <button type="submit">
             {favorite ?
-            <img className="wordIcon" id="favorite" src="/src/assets/icons/favorited.svg" alt="a heart icon" />
+            <img className="wordIcon" id="favorite" src={ favorited } alt="a heart icon" />
             :
-            <img className="wordIcon" id="favorite" src="/src/assets/icons/favorite.svg" alt="a heart icon" />
+            <img className="wordIcon" id="favorite" src={ favoriteIcon } alt="a heart icon" />
             }
           </button>
         </div>
