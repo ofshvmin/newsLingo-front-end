@@ -29,6 +29,8 @@ const TranslationCard = (props) => {
     }
   }
 
+  console.log("CARD PROPS", props);
+
   const hasData = !!props.translation.length
   if(!hasData) return (
     <main className={styles.translationCard}>
@@ -60,7 +62,10 @@ const TranslationCard = (props) => {
     )
   } 
 
-  const hasNoRelatedWords = !props.translation[0].translations.length
+  // const hasNoRelatedWords = !props.translation[0].translations.length
+  const hasNoRelatedWords = props.translation.every(translation => {
+    !translation.translations.length
+  })
   if(hasNoRelatedWords) return (
     <main className={styles.translationCard}>
       <div className={styles.relatedWords}>
@@ -70,29 +75,37 @@ const TranslationCard = (props) => {
     </main>
   )
 
+  const finalTranslations = props.translation.filter(translation => (
+    translation.partOfSpeech && translation.translations.length
+  ))
+
   return (
     <main className={styles.translationCard}>
       <form onSubmit={handleSubmit} >
-        <input 
-          name="word"
-          value={props.translation[0]?.queryWord}
-          readOnly
-          className={styles.word}
-        />
-        <input
-          name="partOfSpeech"
-          value={props.translation[0]?.partOfSpeech}
-          readOnly
-          className={styles.partOfSpeech}
-        />
-        <textarea 
-          name="translation"
-          value={props.translation[0]?.translations?.join(', ')}
-          type="text"
-          readOnly
-          className={styles.translation}
-        >
-        </textarea>
+        {finalTranslations.map((translation, idx) => (
+          <>
+            <input 
+              name="word"
+              value={translation.queryWord}
+              readOnly
+              className={styles.word}
+            />
+            <input
+              name="partOfSpeech"
+              value={translation.partOfSpeech}
+              readOnly
+              className={styles.partOfSpeech}
+            />
+            <textarea 
+              name="translation"
+              value={translation.translations?.join(', ')}
+              type="text"
+              readOnly
+              className={styles.translation}
+            >
+            </textarea>
+          </>
+        ))}
         <div className={styles.favorite}>
           {/* <button type="submit"><Icon category="Favorite"/></button> */}
           <button type="submit">
@@ -100,7 +113,7 @@ const TranslationCard = (props) => {
             <img className="wordIcon" id="favorite" src="/src/assets/icons/favorited.svg" alt="a heart icon" />
             :
             <img className="wordIcon" id="favorite" src="/src/assets/icons/favorite.svg" alt="a heart icon" />
-}
+            }
           </button>
         </div>
       </form>
