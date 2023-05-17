@@ -14,7 +14,7 @@
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
 }
 
-.articleCard header {
+.articleCardHeader {
   width: 100%;
   padding: 15px;
   display: flex;

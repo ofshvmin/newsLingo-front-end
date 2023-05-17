@@ -1,56 +1,40 @@
 .newComment {
   grid-area: comments;
   display: flex;
-  flex-direction: row;
   align-items: center;
   max-width: 100%;
-  /* padding: 0; */
-  /* border: none; */
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
 }
 
-/* .newComment h3 {
-  margin: 0;
-  color: black;
-} */
-
-/* .newComment input, .newComment textarea {  */
-.newComment textarea { 
-  width: 100%;
+.newComment > textarea { 
+  width: 75%;
+  margin: 20px 0px 20px 0px;
   padding: 15px;
-  font-size: 14px;
-  resize: vertical;
-  border-radius: 5px;
-  margin: 14px 0px 14px 0px;
-  border: 1px solid var(--border);
+  border: 0px;
   font-family: var(--font-family);
+  font-size: 16px;
+  border-radius: var(--border-radius);
 }
 
-.newComment textarea {
-  min-height: 50px;
-}
-
-.newComment button {
-  margin: 0;
+.newComment > button {
   color: white;
-  font-weight: 600;
+  font-weight: 800;
   background: #00a0df;
-}
+  border-radius: var(--border-radius);
+  border: none;
 
-.newComment button[type="submit"] {
-  width: 40px;
-  height: 40px;
   display: flex;
-  margin-left: 14px;
-  /* border-radius: 50%; */
   align-items: center;
   justify-content: center;
+
+  margin: 0 0 0 15px;
+  height: 40px;
   width: 50px;
 }
 
-.newComment button[type="submit"]:hover {
+.newComment > button:hover {
   cursor: pointer;
 }
 

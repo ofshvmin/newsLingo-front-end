@@ -4,6 +4,7 @@ import { useState } from 'react'
 import styles from './TranslationCard.module.css'
 
 // components
+import Word from '../Word/Word'
 // import Icon from "../Icon/Icon"
 
 const TranslationCard = (props) => {
@@ -39,14 +40,25 @@ const TranslationCard = (props) => {
   )
 
   const onlyHasRelatedWords = !props.translation[0].translations
-  if(onlyHasRelatedWords) return (
-    <main className={styles.translationCard}>
-      <div className={styles.relatedWords}>
-        <p>No translation found but view <span>related words:</span></p>
-        <p>{props.translation.filter((word, idx)=> idx<5).join(', ')}</p>
-      </div>
-    </main>
-  )
+  if(onlyHasRelatedWords) {
+    const relatedWords = props.translation.filter((word, idx) => idx < 5)
+    return (
+      <main className={styles.translationCard}>
+        <div className={styles.relatedWords}>
+          <p>No translation found but view <span>related words:</span></p>
+          <p>{relatedWords.map((word,idx) => (
+            <Word 
+              key={idx}
+              word={word}
+              handleFetchDefinition={props.handleFetchDefinition}
+            />
+            ))
+          }</p>
+          {/* <p>{props.translation.filter((word, idx)=> idx<5).join(', ')}</p> */}
+        </div>
+      </main>
+    )
+  } 
 
   const hasNoRelatedWords = !props.translation[0].translations.length
   if(hasNoRelatedWords) return (

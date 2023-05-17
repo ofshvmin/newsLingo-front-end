@@ -18,7 +18,7 @@
   padding: 0;
 }
 
-.word {
+.translationCard > form > .word {
   margin: 10px 10px 5px 10px;
   width:fit-content;
   color: black;
@@ -27,7 +27,7 @@
   background-color:transparent;
 }
 
-.partOfSpeech {
+.translationCard > form > .partOfSpeech {
   width:fit-content;
   font-style: italic;
   /* padding: 0 10px 0 10px; */
@@ -35,8 +35,7 @@
   background-color:transparent;
 }
 
-.translation {
-
+.translationCard > form > .translation {
   resize: none;
   margin: 0px 10px 10px 15px;
   background-color: transparent;
@@ -44,7 +43,7 @@
   width: fit-content;
 }
 
-div.favorite > button {
+.translationCard > form > div > button {
   width: 20px;
   height: 20px;
   background: none;
@@ -56,9 +55,14 @@ div.favorite > button {
   
 }
 
-.translation div > button:hover {
+.translationCard > form > div > button:hover {
   cursor: pointer;
 }
+
+/* .translationCard> form> div > button:active {
+  width: 20px;
+  height: 20px;
+} */
 
 /* div > button > img {
   width: 15px;
