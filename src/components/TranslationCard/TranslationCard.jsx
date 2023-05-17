@@ -105,9 +105,9 @@ const TranslationCard = (props) => {
         <div className={styles.favorite}>
           <button type="submit">
             {favorite ?
-            <img className="wordIcon" id="favorite" src="/src/assets/icons/favorited.svg" alt="a heart icon" />
+            <img className="wordIcon" id="favorite" src="../../assets/icons/favorited.svg" alt="a heart icon" />
             :
-            <img className="wordIcon" id="favorite" src="/src/assets/icons/favorite.svg" alt="a heart icon" />
+            <img className="wordIcon" id="favorite" src="../../assets/icons/favorite.svg" alt="a heart icon" />
             }
           </button>
         </div>
