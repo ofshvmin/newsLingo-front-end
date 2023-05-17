@@ -29,7 +29,6 @@ async function createWord(translationCardFormData) {
 async function indexDictionary() {
   try {
     const profileId = tokenService.getUserFromToken().profile
-    console.log(profileId);
     const res = await fetch(`${BASE_URL}/${profileId}/dictionary`, {
       headers: { 'Authorization': `Bearer ${tokenService.getToken()}` }
     })

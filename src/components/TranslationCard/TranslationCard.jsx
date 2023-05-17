@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 // css
 import styles from './TranslationCard.module.css'
 
@@ -6,16 +8,25 @@ import Word from '../Word/Word'
 // import Icon from "../Icon/Icon"
 
 const TranslationCard = (props) => {
-
+  const [favorite, setFavorite] = useState(false)
+    
   const handleSubmit = (evt) => {
     evt.preventDefault()
     const formData = {
       word: props.translation[0]?.queryWord,
       translation: props.translation.map(t => t.translations.join(', ')),
       partOfSpeech: props.translation.map(t => t.partOfSpeech),
+    }      
+    if(!favorite) {
+      console.log('FORM DATA:',formData)
+      props.handleAddWord(formData)
+      setFavorite(!favorite)
+    } else {
+      let word = props.dictionary.find(fav => fav.word === formData.word)
+      let wordId = word._id
+      props.handleDeleteWord(wordId)
+      setFavorite(!favorite)
     }
-    console.log('FORM DATA:',formData)
-    props.handleAddWord(formData)
   }
 
   const hasData = !!props.translation.length
@@ -85,7 +96,11 @@ const TranslationCard = (props) => {
         <div className={styles.favorite}>
           {/* <button type="submit"><Icon category="Favorite"/></button> */}
           <button type="submit">
+            {favorite || props.isFavorite ?
+            <img className="wordIcon" id="favorite" src="/src/assets/icons/favorited.svg" alt="a heart icon" />
+            :
             <img className="wordIcon" id="favorite" src="/src/assets/icons/favorite.svg" alt="a heart icon" />
+}
           </button>
         </div>
       </form>

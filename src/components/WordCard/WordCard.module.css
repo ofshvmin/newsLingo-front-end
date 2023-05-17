@@ -1,6 +1,8 @@
 .wordContainer {
   display: flex;
-  background-color: #374151;
+  /* background-color: #374151; */
+  background-color: #0C7489;
+  background-color: #119DA4;
   overflow-wrap: break-word;
   position: relative;
   inline-size: 250px;
@@ -38,14 +40,15 @@
   min-width: 200px;
 }
 
- .wordContainer > button {
+.wordContainer > button {
   width: 10px;
   height: 10px;
   background: none;
+  border: none;
   /* color: white; */
   position: absolute;
-  top: -20px;
-  right: 25px;
+  top: 0px;
+  right: 30px;
 }
 
 .wordContainer > img {
@@ -68,11 +71,4 @@
   100% {
       transform: rotateY(0deg);
   }
-}
-
-.wordIcon {
-  width: 3px;
-	height: 3px;
-	object-fit: cover;
-  background-color: blue;
 }
