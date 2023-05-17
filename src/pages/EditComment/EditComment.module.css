@@ -3,7 +3,7 @@
   justify-content: center;
 }
 
-.editComment *{
+.editComment * {
   font-family: var(--font-family);
 }
 .editComment > form {
