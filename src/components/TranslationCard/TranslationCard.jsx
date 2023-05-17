@@ -11,7 +11,6 @@ const TranslationCard = (props) => {
     
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    
     const formData = {
       word: props.translation[0]?.queryWord,
       translation: props.translation.map(t => t.translations.join(', ')),
@@ -26,26 +25,8 @@ const TranslationCard = (props) => {
       let wordId = word._id
       props.handleDeleteWord(wordId)
       setFavorite(!favorite)
+    }
   }
-  
-}
-
-
-
-
-      
-// props.dictionary.find((fav) => {
-//         fav.word === formData.word
-//         console.log(fav.word)
-
-
-      
-// props.handleDeleteWord()
-
-
-
-
-
 
   const hasData = !!props.translation.length
   if(!hasData) return (
