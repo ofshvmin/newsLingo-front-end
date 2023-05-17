@@ -8,7 +8,7 @@ import trash from '../../assets/icons/trash.svg'
 import flip from '../../assets/icons/flip.svg'
 
 
-const WordCard = ({word, handleDeleteWord, dictionary}) => {
+const WordCard = ({word, handleDeleteWord}) => {
   const [showDefinition, setShowDefinition] = useState(false)
   const [flipCard, setFlipCard] = useState(false)
 
@@ -31,8 +31,6 @@ const WordCard = ({word, handleDeleteWord, dictionary}) => {
       partOfSpeech: partOfSpeechArr[idx]
     }
   })
-  
-  console.log("WordObj: ", wordObj);
 
   return (
     <div className={styles.wordContainer}  id={ flipCard ? styles.flip : "" } onClick={handleWordCardClick}>
