@@ -21,7 +21,6 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import * as authService from './services/authService'
 import * as articleService from './services/articleService'
 import * as wordService from './services/wordService'
-import * as profileService from './services/profileService'
 
 // styles
 import './App.css'
@@ -31,7 +30,6 @@ function App() {
   const [articles, setArticles] = useState([])
   const [dictionary, setDictionary] = useState([])
   const navigate = useNavigate()
-  
 
   useEffect(()=> {
     const fetchArticles = async () => {
@@ -49,15 +47,15 @@ function App() {
     if (user) fetchDictionary()
   }, [user])
   
-    const handleDeleteWord = async (wordId) => {
-      await wordService.deleteWord(wordId)
-      setDictionary(dictionary.filter(word => word._id !== wordId))
-    }
+  const handleDeleteWord = async (wordId) => {
+    await wordService.deleteWord(wordId)
+    setDictionary(dictionary.filter(word => word._id !== wordId))
+  }
 
-    const handleAddWord = async (translationCardFormData) => {
-      const data = await wordService.createWord(translationCardFormData)
-      setDictionary([...dictionary, data])
-    }
+  const handleAddWord = async (translationCardFormData) => {
+    const data = await wordService.createWord(translationCardFormData)
+    setDictionary([...dictionary, data])
+  }
 
   const handleLogout = () => {
     authService.logout()

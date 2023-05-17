@@ -101,6 +101,7 @@ const ArticleDetails = (props) => {
       <WordLookup 
         translations={translations}
         handleAddWord={props.handleAddWord}
+        handleDeleteWord={props.handleDeleteWord}
         dictionary={props.dictionary}
       />
       <section>
