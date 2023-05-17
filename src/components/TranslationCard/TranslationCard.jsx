@@ -8,12 +8,6 @@ import Word from '../Word/Word'
 
 const TranslationCard = (props) => {
   const [favorite, setFavorite] = useState(false)
-  
-  useEffect(() => {
-    const alreadyInDictionary = props.dictionary.some(fav => fav.word === props.translation[0].queryWord)
-    if(alreadyInDictionary) setFavorite(true)
-    else setFavorite(false)
-  }, [])
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
