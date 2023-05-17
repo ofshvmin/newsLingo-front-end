@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 // css
 import styles from './NavBar.module.css'
-import logo from '../../assets/icons/logo_text.png'
+import logo from '../../assets/branding/logo-text.png'
 
 const NavBar = ({ user, handleLogout }) => {
 
