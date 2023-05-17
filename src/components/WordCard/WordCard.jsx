@@ -3,7 +3,12 @@ import styles from './WordCard.module.css'
 import { useState } from 'react'
 // import Icon from '../Icon/Icon'
 
-const WordCard = ({word, handleDeleteWord, dictionary}) => {
+// assets
+import trash from '../../assets/icons/trash.svg'
+import flip from '../../assets/icons/flip.svg'
+
+
+const WordCard = ({word, handleDeleteWord}) => {
   const [showDefinition, setShowDefinition] = useState(false)
   const [flipCard, setFlipCard] = useState(false)
 
@@ -26,14 +31,12 @@ const WordCard = ({word, handleDeleteWord, dictionary}) => {
       partOfSpeech: partOfSpeechArr[idx]
     }
   })
-  
-  console.log("WordObj: ", wordObj);
 
   return (
     <div className={styles.wordContainer}  id={ flipCard ? styles.flip : "" } onClick={handleWordCardClick}>
       <button onClick={ ()=>{handleDeleteWord(word._id) ; setFlipCard(false) }
           }>
-        <img className="wordIcon" id="trash" src="/src/assets/icons/trash.svg" alt="delete word" />
+        <img className="wordIcon" id="trash" src={ trash } alt="delete word" />
       </button>
     {showDefinition ? 
       <>
@@ -43,19 +46,14 @@ const WordCard = ({word, handleDeleteWord, dictionary}) => {
           <h4>({wordEl.partOfSpeech})</h4>
         </>
         )}
-
-  
       </>   
-
       : 
-     
-      
-      <h1>{word.word}</h1>}
-
-        <div id="flip-icon-space">
-          <img className="wordIcon" id="flip" src="/src/assets/icons/flip.svg" alt="turn card" />
-        </div>
+      <h1>{word.word}</h1>
+    }
+      <div id="flip-icon-space">
+        <img className="wordIcon" id="flip" src={ flip } alt="turn card" />
       </div>
+    </div>
   )
 }
 
