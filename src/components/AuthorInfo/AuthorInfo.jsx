@@ -15,7 +15,7 @@ const AuthorInfo = ({ content }) => {
     <div className={styles.authorInfo}>
       <img src={photo} alt="The user's avatar" />
       <section>
-        <h4>{content.author.name}</h4>
+        <h5>{content.author.name}</h5>
         <DateCard createdAt={content.createdAt} />
       </section>
     </div>

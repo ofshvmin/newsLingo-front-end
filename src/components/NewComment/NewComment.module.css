@@ -12,7 +12,7 @@
   width: 75%;
   margin: 20px 0px 20px 0px;
   padding: 15px;
-  border: 0px;
+  border: none;
   font-family: var(--font-family);
   font-size: 16px;
   border-radius: var(--border-radius);
@@ -21,7 +21,7 @@
 .newComment > button {
   color: white;
   font-weight: 800;
-  background: #00a0df;
+  background: var(--button-color);
   border-radius: var(--border-radius);
   border: none;
 
