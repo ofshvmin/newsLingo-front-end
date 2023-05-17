@@ -14,11 +14,8 @@ const WordLookup = (props) => {
           key={idx} 
           translation={translation}
           handleAddWord={props.handleAddWord}
-<<<<<<< HEAD
           handleFetchDefinition={props.handleFetchDefinition}
-=======
           dictionary={props.dictionary}
->>>>>>> main
         />
       )}
     </aside>
