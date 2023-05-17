@@ -4,8 +4,8 @@ import { useState } from 'react'
 import Icon from '../Icon/Icon'
 
 // assets
-import trash from '../../assets/icons/trash.svg'
-import flip from '../../assets/icons/flip.svg'
+// import trash from '../../assets/icons/trash.svg'
+// import flip from '../../assets/icons/flip.svg'
 
 
 const WordCard = ({word, handleDeleteWord}) => {
@@ -36,7 +36,8 @@ const WordCard = ({word, handleDeleteWord}) => {
     <div className={styles.wordContainer}  id={ flipCard ? styles.flip : "" } onClick={handleWordCardClick}>
       <button onClick={ ()=>{handleDeleteWord(word._id) ; setFlipCard(false) }
           }>
-        <img className="wordIcon" id="trash" src={ trash } alt="delete word" />
+        {/* <img className="wordIcon" id="trash" src={ trash } alt="delete word" /> */}
+        <Icon category={'Trash'} />
       </button>
     {showDefinition ? 
       <>
