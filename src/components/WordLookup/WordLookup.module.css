@@ -8,6 +8,6 @@
 }
 
 .wordLookup main:not(:first-child) {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
