@@ -1,5 +1,6 @@
 // components
 import ArticleCard from "../../components/ArticleCard/ArticleCard"
+import ArticleCategory from "../../components/ArticleCategory/ArticleCategory";
 
 // css
 import styles from './ArticleList.module.css'
@@ -15,15 +16,31 @@ const ArticleList = (props) => {
       categorizedArticles[article.category[0]] = [article]
   })
 
-  console.log("CAT ARTICLES", categorizedArticles);
+  const categories = Object.keys(categorizedArticles)
+
+  // categories.forEach(category => {
+  //   console.log(`ALL ${category}`, categorizedArticles[category]); 
+  // })  
 
   return (
-    <main className={styles.container}>
-      {props.articles.map(article => (
-        <ArticleCard key={article._id} article={article}/>
+    <>
+      {categories.map((category, idx) => (
+        <ArticleCategory 
+          key={idx} 
+          category={category}
+          articles={categorizedArticles[category]}
+        />
       ))}
-    </main>
+    </>
   )
+
+  // return (
+  //   <main className={styles.container}>
+  //     {props.articles.map(article => (
+  //       <ArticleCard key={article._id} article={article}/>
+  //     ))}
+  //   </main>
+  // )
 }
 
 export default ArticleList
