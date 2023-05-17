@@ -1,12 +1,17 @@
 .wordContainer {
   display: flex;
+  
   /* background-color: #374151; */
-  background-color: #0C7489;
+  /* background-color: #0C7489; */
   background-color: #119DA4;
-  overflow-wrap: break-word;
+  box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
+  -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
+  -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
+  /* overflow-wrap: break-word; */
+  
   position: relative;
-  inline-size: 250px;
-  block-size: 250px;
+  inline-size: 260px;
+  min-height: 260px;
   text-align: center;
   flex-direction: column;
   flex: none;
@@ -22,6 +27,7 @@
 .wordContainer > h1 {
   display: flex;
   min-width: 200px;
+  
   align-content: center;
   justify-content: center;
 }
