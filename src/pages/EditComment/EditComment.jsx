@@ -37,6 +37,7 @@ const EditComment = () => {
           value={formData.text}
           placeholder="Text"
           onChange={handleChange}
+          rows={3}
         />
         <button type="submit">Save</button>
       </form>
