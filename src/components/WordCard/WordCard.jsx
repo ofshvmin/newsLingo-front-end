@@ -31,7 +31,6 @@ const WordCard = ({word, handleDeleteWord, dictionary}) => {
 
   return (
     <div className={styles.wordContainer}  id={ flipCard ? styles.flip : "" } onClick={handleWordCardClick}>
-      <img className="wordIcon" id="flip" src="/src/assets/icons/flip.svg" alt="turn card" />
       <button onClick={ ()=>{handleDeleteWord(word._id) ; setFlipCard(false) }
           }>
         <img className="wordIcon" id="trash" src="/src/assets/icons/trash.svg" alt="delete word" />
@@ -44,6 +43,7 @@ const WordCard = ({word, handleDeleteWord, dictionary}) => {
           <h4>({wordEl.partOfSpeech})</h4>
         </>
         )}
+
   
       </>   
 
@@ -52,6 +52,9 @@ const WordCard = ({word, handleDeleteWord, dictionary}) => {
       
       <h1>{word.word}</h1>}
 
+        <div id="flip-icon-space">
+          <img className="wordIcon" id="flip" src="/src/assets/icons/flip.svg" alt="turn card" />
+        </div>
       </div>
   )
 }

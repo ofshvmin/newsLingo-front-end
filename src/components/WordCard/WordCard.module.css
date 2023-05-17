@@ -27,13 +27,13 @@
 .wordContainer > h1 {
   display: flex;
   min-width: 200px;
-  
   align-content: center;
   justify-content: center;
 }
 
 .wordContainer > h3 {
   display: flex;
+  margin: 20px 0 0 0;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -42,6 +42,7 @@
 }
 .wordContainer > h4 {
   display: flex;
+  margin: 0;
   justify-content: center;
   min-width: 200px;
 }
@@ -60,7 +61,12 @@
 .wordContainer > img {
   position: absolute;
   bottom: 10px;
+}
 
+#flip-icon-space {
+  position: absolute;
+  bottom: 0px;
+  height: 20px;
 }
 
 #flip {
