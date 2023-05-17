@@ -1,15 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 // css
 import styles from './TranslationCard.module.css'
 
 // components
 import Word from '../Word/Word'
-// import Icon from "../Icon/Icon"
 
 const TranslationCard = (props) => {
   const [favorite, setFavorite] = useState(false)
-    
+
   const handleSubmit = (evt) => {
     evt.preventDefault()
     const formData = {
@@ -18,7 +17,7 @@ const TranslationCard = (props) => {
       partOfSpeech: props.translation.map(t => t.partOfSpeech),
     }      
     if(!favorite) {
-      console.log('FORM DATA:',formData)
+      //console.log('FORM DATA:',formData)
       props.handleAddWord(formData)
       setFavorite(!favorite)
     } else {
@@ -28,8 +27,6 @@ const TranslationCard = (props) => {
       setFavorite(!favorite)
     }
   }
-
-  console.log("CARD PROPS", props);
 
   const hasData = !!props.translation.length
   if(!hasData) return (
@@ -56,15 +53,14 @@ const TranslationCard = (props) => {
             />
             ))
           }</p>
-          {/* <p>{props.translation.filter((word, idx)=> idx<5).join(', ')}</p> */}
         </div>
       </main>
     )
   } 
 
-  // const hasNoRelatedWords = !props.translation[0].translations.length
+
   const hasNoRelatedWords = props.translation.every(translation => {
-    !translation.translations.length
+    return !translation.translations.length
   })
   if(hasNoRelatedWords) return (
     <main className={styles.translationCard}>
@@ -107,9 +103,8 @@ const TranslationCard = (props) => {
           </>
         ))}
         <div className={styles.favorite}>
-          {/* <button type="submit"><Icon category="Favorite"/></button> */}
           <button type="submit">
-            {favorite || props.isFavorite ?
+            {favorite ?
             <img className="wordIcon" id="favorite" src="/src/assets/icons/favorited.svg" alt="a heart icon" />
             :
             <img className="wordIcon" id="favorite" src="/src/assets/icons/favorite.svg" alt="a heart icon" />

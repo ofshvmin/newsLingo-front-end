@@ -7,7 +7,7 @@
 
 }
 
-.wordLookup main:not(:first-child) {
+.wordLookup main:not(:last-child) {
   opacity: 0.5;
 }
 
