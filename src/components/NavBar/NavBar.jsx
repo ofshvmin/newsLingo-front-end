@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 // css
 import styles from './NavBar.module.css'
+import logo from '../../assets/branding/logo-text.png'
 
 const NavBar = ({ user, handleLogout }) => {
 
@@ -29,7 +30,8 @@ const NavBar = ({ user, handleLogout }) => {
 
   return (
     <nav className={styles.navContainer}>
-      <NavLink id={styles.links} to={`/`}><h2>NewsLingo</h2></NavLink>
+      {/* <NavLink id={styles.links} to={`/`}><h2>NewsLingo</h2></NavLink> */}
+      <NavLink id={styles.links} to={`/`}><img src={logo} alt="NewsLingo" /></NavLink>
 
       {user ? 
         protectedLinks : publicLinks}
