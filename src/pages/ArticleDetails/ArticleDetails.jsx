@@ -70,13 +70,15 @@ const ArticleDetails = (props) => {
       })
 
       console.log('Final translation parse: ', newWordTranslations);
-      setTranslations([...translations, newWordTranslations])
+       setTranslations([...translations, newWordTranslations])
+      //etTranslations([newWordTranslations, ...translations])
       console.log('Translations state', translations);
     } else {
       // merriam-webster returns alternative search suggestions when it can't find a given word
       console.log("Word not found. Alternate search suggestions:", data);
-      setTranslations([...translations, data])
-
+      //setTranslations([data, ...translations])
+       setTranslations([...translations, data])
+      
     }
   }
 
