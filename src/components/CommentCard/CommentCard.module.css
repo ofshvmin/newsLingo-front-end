@@ -1,23 +1,79 @@
 .commentCard {
-  background-color: var(--navBar-color);
-  padding: 10px;
-  margin: 20px 0;
-  border-radius: 10px;
+  grid-area: comments;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
 }
-.commentCard span {
+
+.commentCard > .text { 
+  width: 75%;
+  margin: 20px 0px 20px 0px;
+  padding: 15px;
+  border: 0px;
+  font-family: var(--font-family);
+  font-size: 16px;
+  border-radius: var(--border-radius);
+  background-color: var(--commentCard-color);
+}
+
+.commentCard > .actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.commentCard > .actions > button {
+  background: #00a0df;
+  color: white;
+  font-weight: 800;
+  margin: 0 0 0 15px;
+  height: 40px;
+  width: 50px;
+  border-radius: var(--border-radius);
+  border: none;
+}
+
+.commentCard > .actions > button * {
+  color: white;
+}
+
+.commentCard > .actions > button:hover {
+  cursor: pointer;
+}
+
+.commentCard > .text > header {
+  display: flex;
+  align-items: center;
+}
+
+.commentCard > .text > header > div {
+  margin: 0;
+}
+
+.commentCard > .text > p {
+  margin: 10px 20px 10px 70px;
+}
+
+/* .commentCard > header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+} */
+/* .commentCard > header > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 10px;
+} */
 
-}
+/* .commentCard > header > div { */
+  /* margin-right: 0; */
+  /* width: 60px; */
+  /* margin-left: 10px; */
+  /* padding: 10px; */
+/* } */
 
-.commentCard button {
-  width: 60px;
-  margin-left: 10px;
-  padding: 10px;
-}
-
-.commentCard p {
-  margin-left: 15px;
-}
