@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 // assets
-import favoriteIcon from '../../assets/icons/favorite.svg'
-import favorited from '../../assets/icons/favorited.svg'
+// import favoriteIcon from '../../assets/icons/favorite.svg'
+// import favorited from '../../assets/icons/favorited.svg'
 
 // css
 import styles from './TranslationCard.module.css'
 
 // components
+import Icon from '../Icon/Icon'
 import Word from '../Word/Word'
 
 const TranslationCard = (props) => {
@@ -82,7 +83,7 @@ const TranslationCard = (props) => {
   return (
     <main className={styles.translationCard}>
       <form onSubmit={handleSubmit} >
-        {finalTranslations.map((translation, idx) => (
+        {finalTranslations.map((translation) => (
           <>
             <input 
               name="word"
@@ -109,9 +110,11 @@ const TranslationCard = (props) => {
         <div className={styles.favorite}>
           <button type="submit">
             {favorite ?
-            <img className="wordIcon" id="favorite" src={ favorited } alt="a heart icon" />
+            // <img className="wordIcon" id="favorite" src={ favorited } alt="a heart icon" />
+            <Icon category={'Favorited'} />
             :
-            <img className="wordIcon" id="favorite" src={ favoriteIcon } alt="a heart icon" />
+            // <img className="wordIcon" id="favorite" src={ favoriteIcon } alt="a heart icon" />
+            <Icon category={'Favorite'} />
             }
           </button>
         </div>

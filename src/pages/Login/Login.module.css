@@ -1,47 +1,74 @@
-input {
-  margin-left: 16px;
-  padding: 4px 8px;
-  font-size: 16px;
-  width: 300px;
-}
-
-input[type="file"] {
-  padding: 0;
-}
-
-.container {
+.login {
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
-.message {
-  margin-top: 0;
-  height: 22px;
-  color: #dd1b16;
+.login * {
+  margin: 0;
+}
+
+.login > h1 {
+  margin-bottom: 20px;
+}
+
+.login > .message {
+  margin-bottom: 25px;
+  height: 20px;
+  color: #fb7f03;
   font-size: 18px;
   font-weight: bold;
 }
 
-.form {
+.login > .form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
 }
 
-.label {
+.login > .form > .label {
   width: 100%;
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-.button {
+.login > .form > .label > input {
+  margin-left: 15px;
+  padding: 10px 10px;
+  font-size: 16px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+
+}
+
+.login > .form > .label:last-of-type {
+  margin-bottom: 30px;
+}
+
+.login > .form > .button > button {
+  color: white;
+  font-weight: 800;
+
+  background: var(--button-color);
+  border-radius: var(--border-radius);
+  border: none;
+
+  height: 40px;
+  width: 80px;
+  padding: 0;
   margin-left: 16px;
 }
 
-.form > label:last-of-type {
-  margin-bottom: 16px;
+.login > .form > .button > button > a {
+  color: white;
 }
