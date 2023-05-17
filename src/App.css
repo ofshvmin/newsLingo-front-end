@@ -36,7 +36,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-a,
+/* a,
 a:visited {
   color: #00d8ff
 }
@@ -44,5 +44,5 @@ a:visited {
 nav > ul {
   margin: 0;
   padding: 16px 32px;
-}
+} */
 
