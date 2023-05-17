@@ -1,15 +1,15 @@
 :root {
   --font: 'Open Sans', 'Helvetica Neue', 'Segoe UI', sans-serif;
-  /* --background-color: #2B303A; */
   --background-color: #1C3144;
-  
-
-  --navBar-color: #EEE5E9;
-  --navBar-color: #22262E;
+  --navBar-color: #162837;
+  /* --wordCard-color: #92DCE5; */
+  --wordCard-color: #EEE5E9;
+  /* --articleCard-color: #374151; */
+  --articleCard-color: #111f2b;
+  /* --sideBar-color: #22262e; */
+  --sideBar-color: #162837;
   --button-color: #D8315B;
-  --card-color: #92DCE5;
-  --sideBar-color: #22262E;
-  --commentCard-color: #22262E;
+  --commentCard-color: #162837; 
 
   --page-margin: 100px;
   --border-radius: 10px;
@@ -27,9 +27,7 @@ body {
 
   margin: 0;
   min-height: 100vh;
-
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
+  font-family: var(--font);
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--background-color);
 
