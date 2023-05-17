@@ -10,20 +10,22 @@ import styles from './CommentCard.module.css'
 const CommentCard = ({comment, articleId, user, handleDeleteComment}) => {
   return (
     <article className={styles.commentCard}>
-      <header>
-        <span>
+      <div className={styles.text}>
+        <header>
           <AuthorInfo content={comment} />
-          {comment.author._id === user.profile &&
-            <div className="actions">
-              <Link to={`/articles/${articleId}/comments/${comment._id}`} state={comment}>
-                Edit
-              </Link>
-              <button onClick={()=> handleDeleteComment(articleId, comment._id)}>Delete</button>
-            </div>
-          }
-        </span>
-      </header>
-      <p>{comment.text}</p>
+        </header>
+        <p>{comment.text}</p>
+      </div>
+      {comment.author._id === user.profile &&
+        <div className={styles.actions}>
+          <button>
+            <Link to={`/articles/${articleId}/comments/${comment._id}`} state={comment}>
+              Edit
+            </Link>
+          </button>
+          <button onClick={()=> handleDeleteComment(articleId, comment._id)}>Delete</button>
+        </div>
+      }
     </article>
   )
 }

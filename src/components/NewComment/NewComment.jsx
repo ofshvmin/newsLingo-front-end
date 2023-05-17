@@ -27,6 +27,7 @@ const NewComment = (props) => {
         value={formData.text}
         placeholder="Add a comment"
         onChange={handleChange}
+        rows={3}
       />
       <button type="submit">Save</button>
     </form>
