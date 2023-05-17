@@ -31,6 +31,9 @@
   gap: 20px;
 }
 
+.navContainer > #links > img {
+  height: 30px;
+}
 .mainNavBtns {
   text-align: center;
   width: 140px;
@@ -67,6 +70,7 @@
 
 #links {
   color: white;
+  display: flex;
 }
 
 a,
