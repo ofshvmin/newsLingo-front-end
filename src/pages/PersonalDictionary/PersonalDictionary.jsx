@@ -6,6 +6,7 @@ import styles from './PersonalDictionary.module.css'
 
 
 const PersonalDictionary = ({dictionary, handleDeleteWord}) => {
+  console.log("PERSONAL DICTIONARY",dictionary);
   return (
     <main className={styles.dictionaryContainer}>
       {!dictionary.length ? 'No Words' :
@@ -14,6 +15,7 @@ const PersonalDictionary = ({dictionary, handleDeleteWord}) => {
             key={word._id} 
             word={word}
             handleDeleteWord={handleDeleteWord}
+            dictionary={dictionary}
           />
         ))
       }
