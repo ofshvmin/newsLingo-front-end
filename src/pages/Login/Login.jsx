@@ -44,7 +44,7 @@ const LoginPage = ({ handleAuthEvt }) => {
   }
 
   return (
-    <main className={styles.container}>
+    <main className={styles.login}>
       <h1>Log In</h1>
       <p className={styles.message}>{message}</p>
       <form autoComplete="off" onSubmit={handleSubmit} className={styles.form}>
@@ -66,9 +66,11 @@ const LoginPage = ({ handleAuthEvt }) => {
             onChange={handleChange}
           />
         </label>
-        <div>
-          <Link to="/">Cancel</Link>
-          <button className={styles.button} disabled={isFormInvalid()}>
+        <div className={styles.button}>
+          <button>
+            <Link to="/">Cancel</Link>
+          </button>
+          <button  disabled={isFormInvalid()}>
             Log In
           </button>
         </div>
