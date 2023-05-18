@@ -4,8 +4,6 @@ import favorited from '../../assets/icons/favorited.svg'
 import flip from '../../assets/icons/flip.svg'
 import trash from '../../assets/icons/trash.svg'
 
-console.log(flip);
-
 const Icon = ({ category }) => {
   const icons = {
     Favorite: favorite,

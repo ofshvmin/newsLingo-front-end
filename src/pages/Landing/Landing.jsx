@@ -8,7 +8,6 @@ const Landing = () => {
     <main className={styles.landingContainer}>
       <section className={styles.splash}>
         <img src={logo} alt="NewsLingo" />
-        {/* <h1 className={styles.slogan}> Breaking News, Breaking Barriers </h1> */}
       </section>
 
       <section className={styles.about}>

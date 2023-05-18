@@ -27,8 +27,7 @@ const ArticleBody = (props) => {
             handleFetchDefinition={props.handleFetchDefinition}
           />     
         )
-      }
-      )}
+      })}
     </article>
   )
 }

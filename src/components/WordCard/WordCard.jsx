@@ -5,11 +5,6 @@ import { useState } from 'react'
 // components
 import Icon from '../Icon/Icon'
 
-// assets
-// import trash from '../../assets/icons/trash.svg'
-// import flip from '../../assets/icons/flip.svg'
-
-
 const WordCard = ({word, handleDeleteWord}) => {
   const [showDefinition, setShowDefinition] = useState(false)
   const [flipCard, setFlipCard] = useState(false)
@@ -38,27 +33,22 @@ const WordCard = ({word, handleDeleteWord}) => {
     <div className={styles.wordContainer}  id={ flipCard ? styles.flip : "" } onClick={handleWordCardClick}>
       <button onClick={ ()=>{handleDeleteWord(word._id) ; setFlipCard(false) }
           }>
-        {/* <img className="wordIcon" id="trash" src={ trash } alt="delete word" /> */}
         <Icon category={'Trash'} />
       </button>
-    {showDefinition ? 
-      <>
-      {wordObj.map((wordEl) => 
+      {showDefinition ? 
         <>
-          <h3>{wordEl.translation}</h3>
-          <h4>({wordEl.partOfSpeech})</h4>
-        </>
-        )}
-      </>   
-      : 
-      <h1>{word.word}</h1>
-    }
+        {wordObj.map((wordEl) => 
+          <>
+            <h3>{wordEl.translation}</h3>
+            <h4>({wordEl.partOfSpeech})</h4>
+          </>
+          )}
+        </>   
+        : 
+        <h1>{word.word}</h1>
+      }
 
-    <Icon category={'Flip'} />
-
-      {/* <div id="flip-icon-space">
-        <img className="wordIcon" id="flip" src={ flip } alt="turn card" />
-      </div> */}
+      <Icon category={'Flip'} />
     </div>
   )
 }

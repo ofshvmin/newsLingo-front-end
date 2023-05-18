@@ -7,7 +7,6 @@ import styles from './Word.module.css'
 const Word = (props) => {
 
   const handleClick = () => {
-    console.log('Word is', props.word);
     props.handleFetchDefinition(props.word)
   }
 

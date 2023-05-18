@@ -5,8 +5,8 @@ async function getTranslationFromAPI(query) {
   try {
     const res = await fetch(`${BASE_URL}/wordLookup?query=${query}`)
     return res.json()
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error)
   }
 }
 
@@ -21,8 +21,8 @@ async function createWord(translationCardFormData) {
       body: JSON.stringify(translationCardFormData)
           })
       return res.json()
-  } catch(err) {
-    console.log(err)
+  } catch(error) {
+    console.log(error)
   }
 }
 
@@ -49,18 +49,6 @@ async function deleteWord(wordId) {
     console.log(error)
   }
 }
-// template
-// async function show() {
-//   try {
-//     const res = await fetch(BASE_URL, {
-//       headers: { 'Authorization': `Bearer ${tokenService.getToken()}` }
-//     })
-//     return res.json()
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
 
 export {
   getTranslationFromAPI,
