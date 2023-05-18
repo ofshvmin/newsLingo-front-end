@@ -6,7 +6,7 @@ import styles from './ArticleCard.module.css'
 import articleImgPlaceholder from '../../assets/branding/logo.png'
 
 const ArticleCard = ({article}) => {
-  const image_url = article.image_url ? article.image_url : articleImgPlaceholder
+  const image_url = article.image_url.slice(0,5) === 'https' ? article.image_url : articleImgPlaceholder
   const country = article.country ? article.country[0] : ''
 
   return (  
