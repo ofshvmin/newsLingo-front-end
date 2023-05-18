@@ -18,9 +18,10 @@ const ArticleList = (props) => {
 
   const categories = Object.keys(categorizedArticles)
 
-  // categories.forEach(category => {
-  //   console.log(`ALL ${category}`, categorizedArticles[category]); 
-  // })  
+  if(categories.includes('top')){
+    const topCategory = categories.splice(categories.indexOf('top'), categories.indexOf('top'))
+    categories.unshift(topCategory[0])
+  }   
 
   return (
     <>
