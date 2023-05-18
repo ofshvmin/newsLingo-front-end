@@ -32,7 +32,7 @@
 
 .splash::before {    
   content: "";
-  background-image: url('../../assets/images/dictionary-img.jpg');
+  background-image: url('../../assets/images/dictionary.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
