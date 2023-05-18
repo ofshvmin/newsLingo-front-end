@@ -54,7 +54,7 @@
 
 .mainNavBtns:hover {
   background-color: gray;
-} */
+}
 
 @keyframes fadeOut {
   0% { color: white;}
