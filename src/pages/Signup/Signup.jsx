@@ -141,7 +141,7 @@ const Signup = ({ handleAuthEvt }) => {
             className="uniButton"
             disabled={ isFormInvalid() || isSubmitted }
           >
-            {!isSubmitted ? 'Sign Up' : '🚀 Sending...'}
+            {!isSubmitted ? 'Sign Up' : 'Sending...'}
           </button>
         </div>
       </form>
