@@ -20,6 +20,8 @@ const ArticleList = (props) => {
     categories.unshift(topCategory[0])
   }   
 
+  if(!props.articles) return <h1>LOADING...</h1>
+
   return (
     <>
       {categories.map((category, idx) => (
