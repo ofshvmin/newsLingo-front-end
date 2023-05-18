@@ -63,6 +63,7 @@
 
 .signup > .form > div > button > a {
   color: white;
+  text-decoration: none;
 }
 
 input[type="file"] {
