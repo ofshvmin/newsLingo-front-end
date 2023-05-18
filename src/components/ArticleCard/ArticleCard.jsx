@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 // css & assets
 import styles from './ArticleCard.module.css'
-import articleImgPlaceholder from '../../assets/icons/no-image-icon.png'
+import articleImgPlaceholder from '../../assets/branding/logo.png'
 
 const ArticleCard = ({article}) => {
   console.log('Article', article);
