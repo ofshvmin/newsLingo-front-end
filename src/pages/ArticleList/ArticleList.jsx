@@ -1,5 +1,5 @@
 // components
-import ArticleCategory from "../../components/ArticleCategory/ArticleCategory";
+import ArticleCategory from "../../components/ArticleCategory/ArticleCategory"
 
 const ArticleList = (props) => {
   let articlesWithImages = props.articles.filter(article => (
@@ -12,7 +12,7 @@ const ArticleList = (props) => {
     ))
   )
 
-  const categorizedArticles = {};
+  const categorizedArticles = {}
   articlesWithImages.forEach(article => {
     if(categorizedArticles[article.category[0]]) 
       categorizedArticles[article.category[0]].push(article)

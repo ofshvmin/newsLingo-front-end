@@ -1,5 +1,5 @@
 // components
-import ArticleCard from "../ArticleCard/ArticleCard";
+import ArticleCard from "../ArticleCard/ArticleCard"
 
 // css
 import styles from './ArticleCategory.module.css'
@@ -19,4 +19,4 @@ const ArticleCategory = (props) => {
   )
 }
 
-export default ArticleCategory;
+export default ArticleCategory
