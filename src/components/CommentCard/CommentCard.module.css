@@ -10,7 +10,7 @@
 
 .commentCard > .text { 
   width: 75%;
-  margin: 20px 0px 20px 0px;
+  margin-bottom: 20px;
   padding: 10px 15px;
   font-family: var(--font-family);
   font-size: 16px;
@@ -26,18 +26,14 @@
 }
 
 .commentCard > .actions > button {
-  background: var(--button-color);
-  color: white;
-  font-weight: 800;
   margin: 0 0 0 15px;
   height: 40px;
-  width: 50px;
-  border-radius: var(--border-radius);
-  border: none;
+  width: 60px;
 }
 
 .commentCard > .actions > button * {
   color: white;
+  text-decoration: none;
 }
 
 .commentCard > .actions > button:hover {

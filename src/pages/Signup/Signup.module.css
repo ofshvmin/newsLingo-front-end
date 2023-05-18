@@ -103,21 +103,14 @@ input[type="file"] {
   margin-bottom: 30px;
 }
 
-.signup > .form > .button > button {
-  color: white;
-  font-weight: 800;
-
-  background: var(--button-color);
-  border-radius: var(--border-radius);
-  border: none;
-
+.signup > .form > div > button {
   height: 40px;
   width: 80px;
   padding: 0;
   margin-left: 16px;
 }
 
-.signup > .form > .button > button > a {
+.signup > .form > div > button > a {
   color: white;
 }
 

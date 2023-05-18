@@ -18,12 +18,12 @@ const CommentCard = ({comment, articleId, user, handleDeleteComment}) => {
       </div>
       {comment.author._id === user.profile &&
         <div className={styles.actions}>
-          <button>
+          <button className="uniButton">
             <Link to={`/articles/${articleId}/comments/${comment._id}`} state={comment}>
               Edit
             </Link>
-          </button>
-          <button onClick={()=> handleDeleteComment(articleId, comment._id)}>Delete</button>
+          </button >
+          <button className="uniButton" onClick={()=> handleDeleteComment(articleId, comment._id)}>Delete</button>
         </div>
       }
     </article>
