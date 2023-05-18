@@ -1,6 +1,3 @@
-// resources
-import { alphabet } from './alphabet'
-
 // css
 import styles from './Word.module.css'
 

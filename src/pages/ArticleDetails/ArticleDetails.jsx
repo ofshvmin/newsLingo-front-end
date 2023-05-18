@@ -46,14 +46,11 @@ const ArticleDetails = (props) => {
   const handleFetchDefinition = async (query) => {
     const data = await wordService.getTranslationFromAPI(query.toLowerCase())
 
-    // If API has a translation...
     if(data[0].hwi) {
-      // filter out unrelated translations (merriam-webster was sometimes giving additional translations for unrelated words)
       const noAccentQuery = query.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 
       const filteredData = data.filter(element => (element.meta.stems.includes(query.toLowerCase()) || element.meta.stems.includes(noAccentQuery)) && element.meta.lang === 'es')
-
-      // parse/simplify the results of the api call into 3 properties for each translation
+      
       const newWordTranslations = filteredData.map(entry => {
         const translationInfo = {}
         translationInfo.queryWord = entry.hwi.hw
@@ -64,8 +61,7 @@ const ArticleDetails = (props) => {
 
       setTranslations([...translations, newWordTranslations])
     } else {
-      // merriam-webster returns alternative search suggestions when it can't find a given word
-      setTranslations([...translations, data])
+        setTranslations([...translations, data])
     }
   }
 

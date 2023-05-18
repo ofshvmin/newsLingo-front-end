@@ -12,7 +12,7 @@
 .translationCard * {
   margin: 0;
   border: 0;
-  font-family: var(--font);
+  font-family: var(--font-family);
   font-size: 14px;
   width: 100%;
   padding: 0;
@@ -22,7 +22,6 @@
   margin: 10px 10px 5px 10px;
   width:fit-content;
   color: black;
-  /* padding: 0 10px 0 10px; */
   font-weight: 800;
   background-color:transparent;
 }
@@ -30,7 +29,6 @@
 .translationCard > form > .partOfSpeech {
   width:fit-content;
   font-style: italic;
-  /* padding: 0 10px 0 10px; */
   margin: 0 10px 0 15px;
   background-color:transparent;
 }
@@ -58,17 +56,6 @@
 .translationCard > form > div > button:hover {
   cursor: pointer;
 }
-
-/* .translationCard> form> div > button:active {
-  width: 20px;
-  height: 20px;
-} */
-
-/* div > button > img {
-  width: 15px;
-  height: 15px;
-  padding: 0;
-} */
 
 .relatedWords {
   padding: 0 10px 0 10px;

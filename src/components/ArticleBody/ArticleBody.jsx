@@ -19,7 +19,6 @@ const ArticleBody = (props) => {
   return (
     <article className={styles.articleBody}>
       {words.map((word, idx) => {
-
         return(
           <Word 
             key={idx} 
