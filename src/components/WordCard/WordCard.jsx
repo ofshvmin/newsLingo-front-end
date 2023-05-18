@@ -31,17 +31,16 @@ const WordCard = ({word, handleDeleteWord}) => {
 
   return (
     <div className={styles.wordContainer}  id={ flipCard ? styles.flip : "" } onClick={handleWordCardClick}>
-      <button onClick={ ()=>{handleDeleteWord(word._id) ; setFlipCard(false) }
-          }>
+      <button onClick={()=>{handleDeleteWord(word._id) ; setFlipCard(false) }}>
         <Icon category={'Trash'} />
       </button>
       {showDefinition ? 
         <>
-        {wordObj.map((wordEl) => 
-          <>
-            <h3>{wordEl.translation}</h3>
-            <h4>({wordEl.partOfSpeech})</h4>
-          </>
+          {wordObj.map((wordEl) => 
+            <>
+              <h3>{wordEl.translation}</h3>
+              <h4>({wordEl.partOfSpeech})</h4>
+            </>
           )}
         </>   
         : 

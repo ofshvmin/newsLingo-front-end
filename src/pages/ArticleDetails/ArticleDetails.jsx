@@ -61,7 +61,7 @@ const ArticleDetails = (props) => {
 
       setTranslations([...translations, newWordTranslations])
     } else {
-        setTranslations([...translations, data])
+      setTranslations([...translations, data])
     }
   }
 

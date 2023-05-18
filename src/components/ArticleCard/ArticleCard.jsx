@@ -16,8 +16,8 @@ const ArticleCard = ({article}) => {
         <header className={styles.articleCardHeader}>
           <h4>⏰ {article.pubDate.slice(0,10)}</h4>
           {country.length ? 
-          <h4>{country.toUpperCase()}</h4>
-          : ''
+            <h4>{country.toUpperCase()}</h4>
+            : ''
           }
           <h4>{article.creator}</h4>
           <h1>{article.title}</h1>
