@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 
 // css & assets
 import styles from './ArticleDetails.module.css'
-import articleImgPlaceholder from '../../assets/icons/no-image-icon.png'
+import articleImgPlaceholder from '../../assets/branding/logo.png'
 
 // services
 import * as articleService from '../../services/articleService'

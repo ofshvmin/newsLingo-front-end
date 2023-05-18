@@ -7,7 +7,6 @@ import articleImgPlaceholder from '../../assets/branding/logo.png'
 
 const ArticleCard = ({article}) => {
   console.log('Article', article);
-  const creator = article.creator ? article.creator[0] : "NO CREATOR FOUND"
   const image_url = article.image_url ? article.image_url : articleImgPlaceholder
 
   const country = article.country ? article.country[0] : ''
@@ -22,7 +21,7 @@ const ArticleCard = ({article}) => {
           <h4>{country.toUpperCase()}</h4>
           : ''
           }
-          <h4>{creator}</h4>
+          <h4>{article.creator}</h4>
           <h1>{article.title}</h1>
           <p>{article.description}</p>
         </header>
