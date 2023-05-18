@@ -6,6 +6,9 @@ import styles from './ArticleCategory.module.css'
 
 const ArticleCategory = (props) => {
   console.log('ART CAT PROPS', props);
+
+  if(!props.category) return
+
   return (
     <>
       <h1 className={styles.categoryTitle}>{props.category.toUpperCase()}</h1>
