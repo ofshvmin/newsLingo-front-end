@@ -10,7 +10,7 @@
 
 .commentCard > .text { 
   width: 75%;
-  margin: 20px 0px 20px 0px;
+  margin-bottom: 20px;
   padding: 10px 15px;
   font-family: var(--font-family);
   font-size: 16px;

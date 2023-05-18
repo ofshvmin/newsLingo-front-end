@@ -29,7 +29,7 @@ const NewComment = (props) => {
         onChange={handleChange}
         rows={3}
       />
-      <button type="submit">Save</button>
+      <button className="uniButton" type="submit">Save</button>
     </form>
   )
 }

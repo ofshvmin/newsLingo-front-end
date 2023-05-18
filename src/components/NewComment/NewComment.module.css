@@ -19,24 +19,26 @@
 }
 
 .newComment > button {
-  color: white;
-  font-weight: 800;
-  background: var(--button-color);
-  border-radius: var(--border-radius);
-  border: none;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  font-weight: 800;
 
   margin: 0 0 0 15px;
   height: 40px;
   width: 50px;
-}
-
-.newComment > button:hover {
   cursor: pointer;
 }
+
+/* .newComment > button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+} */
+
+/* .newComment > button:hover {
+  cursor: pointer;
+} */
 
 /* .newComment button[type="submit"] img {
   width: 18px;
