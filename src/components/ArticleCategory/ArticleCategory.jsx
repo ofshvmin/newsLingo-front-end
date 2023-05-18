@@ -1,4 +1,7 @@
+// components
 import ArticleCard from "../ArticleCard/ArticleCard";
+
+// css
 import styles from './ArticleCategory.module.css'
 
 const ArticleCategory = (props) => {
@@ -10,10 +13,9 @@ const ArticleCategory = (props) => {
         {props.articles.map(article => (
           <ArticleCard key={article._id} article={article}/>
         ))}
-
       </main>
     </>
-  );
+  )
 }
 
 export default ArticleCategory;
