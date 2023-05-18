@@ -1,8 +1,5 @@
+// npm modules
 import { useState } from 'react'
-
-// assets
-// import favoriteIcon from '../../assets/icons/favorite.svg'
-// import favorited from '../../assets/icons/favorited.svg'
 
 // css
 import styles from './TranslationCard.module.css'
@@ -22,7 +19,6 @@ const TranslationCard = (props) => {
       partOfSpeech: props.translation.map(t => t.partOfSpeech),
     }      
     if(!favorite) {
-      //console.log('FORM DATA:',formData)
       props.handleAddWord(formData)
       setFavorite(!favorite)
     } else {
@@ -110,10 +106,8 @@ const TranslationCard = (props) => {
         <div className={styles.favorite}>
           <button type="submit">
             {favorite ?
-            // <img className="wordIcon" id="favorite" src={ favorited } alt="a heart icon" />
             <Icon category={'Favorited'} />
             :
-            // <img className="wordIcon" id="favorite" src={ favoriteIcon } alt="a heart icon" />
             <Icon category={'Favorite'} />
             }
           </button>

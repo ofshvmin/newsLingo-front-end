@@ -1,9 +1,6 @@
 // components
 import ArticleCategory from "../../components/ArticleCategory/ArticleCategory";
 
-// css
-import styles from './ArticleList.module.css'
-
 const ArticleList = (props) => {
   const categorizedArticles = {};
   props.articles.forEach(article => {

@@ -50,7 +50,6 @@ function App() {
   const handleAddWord = async (translationCardFormData) => {
     const data = await wordService.createWord(translationCardFormData)
     await setDictionary([...dictionary, data])
-    console.log(dictionary);
   }
 
   const handleDeleteWord = async (wordId) => {

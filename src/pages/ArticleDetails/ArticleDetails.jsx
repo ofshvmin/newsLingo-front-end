@@ -28,7 +28,6 @@ const ArticleDetails = (props) => {
   useEffect(() => {
     const fetchArticle = async () => {
       const data = await articleService.show(articleId)
-      console.log(data)
       setArticle(data)
     }
     fetchArticle()
@@ -47,20 +46,11 @@ const ArticleDetails = (props) => {
   const handleFetchDefinition = async (query) => {
     const data = await wordService.getTranslationFromAPI(query.toLowerCase())
 
-    console.log('Data', data);
-
-    // If API has a translation...
     if(data[0].hwi) {
-      // filter out unrelated translations (merriam-webster was sometimes giving additional translations for unrelated words)
       const noAccentQuery = query.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 
-      console.log('No accent query', noAccentQuery);
-
       const filteredData = data.filter(element => (element.meta.stems.includes(query.toLowerCase()) || element.meta.stems.includes(noAccentQuery)) && element.meta.lang === 'es')
-
-      console.log("First filter", filteredData);
       
-      // parse/simplify the results of the api call into 3 properties for each translation
       const newWordTranslations = filteredData.map(entry => {
         const translationInfo = {}
         translationInfo.queryWord = entry.hwi.hw
@@ -69,16 +59,9 @@ const ArticleDetails = (props) => {
         return translationInfo
       })
 
-      console.log('Final translation parse: ', newWordTranslations);
-       setTranslations([...translations, newWordTranslations])
-      //etTranslations([newWordTranslations, ...translations])
-      console.log('Translations state', translations);
+      setTranslations([...translations, newWordTranslations])
     } else {
-      // merriam-webster returns alternative search suggestions when it can't find a given word
-      console.log("Word not found. Alternate search suggestions:", data);
-      //setTranslations([data, ...translations])
-       setTranslations([...translations, data])
-      
+        setTranslations([...translations, data])
     }
   }
 

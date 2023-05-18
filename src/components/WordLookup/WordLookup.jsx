@@ -1,4 +1,3 @@
-
 // css
 import styles from './WordLookup.module.css'
 
@@ -6,7 +5,6 @@ import styles from './WordLookup.module.css'
 import TranslationCard from '../TranslationCard/TranslationCard'
 
 const WordLookup = (props) => {
-  console.log("Translations from word lookup", props.translations);
   return (
     <aside className={styles.wordLookup}>
       {props.translations.map((translation, idx) =>

@@ -5,8 +5,6 @@ import ArticleCard from "../ArticleCard/ArticleCard";
 import styles from './ArticleCategory.module.css'
 
 const ArticleCategory = (props) => {
-  console.log('ART CAT PROPS', props);
-
   if(!props.category) return
 
   return (
