@@ -8,7 +8,6 @@ import profileImg from '../../assets/icons/profilePlaceholder.png'
 import styles from './AuthorInfo.module.css'
 
 const AuthorInfo = ({ content }) => {
-
   const photo = content.author.photo ? content.author.photo : profileImg
 
   return (

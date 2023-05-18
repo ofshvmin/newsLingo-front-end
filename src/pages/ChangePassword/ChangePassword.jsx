@@ -30,8 +30,8 @@ const ChangePassword = ({ handleAuthEvt }) => {
       await authService.changePassword(formData)
       handleAuthEvt()
       navigate('/')
-    } catch (err) {
-      setMessage(err.message)
+    } catch (error) {
+      setMessage(error.message)
     }
   }
 

@@ -8,6 +8,7 @@ import AuthorInfo from "../AuthorInfo/AuthorInfo"
 import styles from './CommentCard.module.css'
 
 const CommentCard = ({comment, articleId, user, handleDeleteComment}) => {
+  
   return (
     <article className={styles.commentCard}>
       <div className={styles.text}>

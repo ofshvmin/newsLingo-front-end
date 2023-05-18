@@ -42,10 +42,8 @@ async function login(loginFormData) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(loginFormData),
     })
-    console.log("response: ", res);
     const json = await res.json()
-    console.log("JSON: ", json)
-    
+
     if (json.err) throw new Error(json.err)
 
     if (json.token) tokenService.setToken(json.token)

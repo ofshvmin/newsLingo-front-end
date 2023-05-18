@@ -8,7 +8,6 @@ import styles from './ArticleBody.module.css'
 import { useState, useEffect } from 'react'
 
 
-
 const ArticleBody = (props) => {
   const [words, setWords] = useState([])
 
@@ -27,8 +26,7 @@ const ArticleBody = (props) => {
             handleFetchDefinition={props.handleFetchDefinition}
           />     
         )
-      }
-      )}
+      })}
     </article>
   )
 }

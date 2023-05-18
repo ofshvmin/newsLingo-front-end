@@ -35,21 +35,20 @@ const WordCard = ({word, handleDeleteWord}) => {
           }>
         <Icon category={'Trash'} />
       </button>
-    {showDefinition ? 
-      <>
-      {wordObj.map((wordEl) => 
+      {showDefinition ? 
         <>
-          <h3>{wordEl.translation}</h3>
-          <h4>({wordEl.partOfSpeech})</h4>
-        </>
-        )}
-      </>   
-      : 
-      <h1>{word.word}</h1>
-    }
+        {wordObj.map((wordEl) => 
+          <>
+            <h3>{wordEl.translation}</h3>
+            <h4>({wordEl.partOfSpeech})</h4>
+          </>
+          )}
+        </>   
+        : 
+        <h1>{word.word}</h1>
+      }
 
-    <Icon category={'Flip'} />
-
+      <Icon category={'Flip'} />
     </div>
   )
 }
