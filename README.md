@@ -40,6 +40,9 @@ Welcome to NewsLingo, an app that helps individuals learn new languages and cult
 - Vite
 - JWT
 - JavaScript / HTML / CSS
+- [Newsdata API](https://newsdata.io/)
+- [Merriam-Webster's Spanish-English Dictionary API](https://dictionaryapi.com/products/api-spanish-dictionary)
+
 <br />
 <br />
 
