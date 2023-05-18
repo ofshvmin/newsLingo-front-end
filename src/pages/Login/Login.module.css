@@ -55,20 +55,13 @@
   margin-bottom: 30px;
 }
 
-.login > .form > .button > button {
-  color: white;
-  font-weight: 800;
-
-  background: var(--button-color);
-  border-radius: var(--border-radius);
-  border: none;
-
+.login > .form  > div > button {
   height: 40px;
   width: 80px;
   padding: 0;
   margin-left: 16px;
 }
 
-.login > .form > .button > button > a {
+.login > .form > div > button > a {
   color: white;
 }

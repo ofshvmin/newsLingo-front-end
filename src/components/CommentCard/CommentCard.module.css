@@ -26,14 +26,9 @@
 }
 
 .commentCard > .actions > button {
-  background: var(--button-color);
-  color: white;
-  font-weight: 800;
   margin: 0 0 0 15px;
   height: 40px;
-  width: 50px;
-  border-radius: var(--border-radius);
-  border: none;
+  width: 60px;
 }
 
 .commentCard > .actions > button * {

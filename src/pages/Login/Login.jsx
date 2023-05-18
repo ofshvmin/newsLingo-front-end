@@ -66,11 +66,11 @@ const LoginPage = ({ handleAuthEvt }) => {
             onChange={handleChange}
           />
         </label>
-        <div className={styles.button}>
-          <button>
+        <div>
+          <button className="uniButton">
             <Link to="/">Cancel</Link>
           </button>
-          <button  disabled={isFormInvalid()}>
+          <button  className="uniButton" disabled={isFormInvalid()}>
             Log In
           </button>
         </div>

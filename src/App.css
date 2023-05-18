@@ -47,6 +47,8 @@ body {
   border-radius: var(--border-radius);
   border: 2px solid var(--button-border-color);
   box-shadow: 1px 10px 10px 1px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: 800;
 }
 
 .uniButton:active {

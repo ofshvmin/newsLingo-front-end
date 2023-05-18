@@ -39,7 +39,7 @@ const EditComment = () => {
           onChange={handleChange}
           rows={3}
         />
-        <button type="submit">Save</button>
+        <button type="submit" className="uniButton">Save</button>
       </form>
     </main>
   )

@@ -31,13 +31,6 @@
 }
 
 .editComment > form > button {
-  color: white;
-  font-weight: 800;
-
-  background: var(--button-color);
-  border-radius: var(--border-radius);
-  border: none;
-
   height: 40px;
   width: 80px;
   padding: 0;
