@@ -1,7 +1,5 @@
 .wordContainer {
   display: flex;
-  /* background-color: #374151; */
-  /* background-color: #0C7489; */
   background-color: #119DA4;
   box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
   -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
@@ -48,7 +46,6 @@
   height: 10px;
   background: none;
   border: none;
-  /* color: white; */
   position: absolute;
   top: 0px;
   right: 30px;
@@ -82,6 +79,5 @@
 }
 
 h4:last-of-type {
-  /* border: 2px solid orange; */
   margin-bottom: 50px;
 }

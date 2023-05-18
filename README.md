@@ -26,8 +26,8 @@ Welcome to NewsLingo, an app that helps individuals learn new languages and cult
 ## Attributions
 - Photo by [Annie Spratt](https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/4-4WPFLVhAY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 - Photo by [Joshua Hoehne](https://unsplash.com/@mrthetrain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/YPgTovTiUv4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-- Do we need to mention where we built the logo?
-- [svgs - ADD LINK]()
+- Logo from [hatchful](https://www.shopify.com/tools/logo-maker)
+- SVGs from [svgrepo.com](https://www.svgrepo.com/)
 - [Open Sans Google Fonts](https://fonts.google.com/?query=open+sans)
 <br />
 <br />

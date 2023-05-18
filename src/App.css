@@ -1,23 +1,20 @@
 :root {
-  --font: 'Open Sans', 'Helvetica Neue', 'Segoe UI', sans-serif;
+  --font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', sans-serif;
+
   --background-color: #1C3144;
   --navBar-color: #162837;
-  /* --wordCard-color: #119DA4; */
+
   --wordCard-color: #13c6cf;
-  /* --wordCard-color: #EEE5E9; */
-  /* --articleCard-color: #374151; */
   --articleCard-color: #111f2b;
-  /* --sideBar-color: #22262e; */
+  --commentCard-color: #becede;
+
   --sideBar-color: #162837;
+
   --button-color: #D8315B;
   --button-border-color: #c62d53;
 
-  /* --commentCard-color: #162837;  */
-  --commentCard-color: #becede;
-
   --page-margin: 100px;
   --border-radius: 10px;
-  --box-shadow: ;
 }
 
 *,
@@ -31,9 +28,11 @@ body {
 
   margin: 0;
   min-height: 100vh;
-  font-family: var(--font);
-  color: rgba(255, 255, 255, 0.87);
+
   background-color: var(--background-color);
+
+  font-family: var(--font-family);
+  color: rgba(255, 255, 255, 0.87);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,7 +45,11 @@ body {
   background: var(--button-color);
   border-radius: var(--border-radius);
   border: 2px solid var(--button-border-color);
+
   box-shadow: 1px 10px 10px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 10px 10px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px 10px 10px 1px rgba(0, 0, 0, 0.5);
+  
   color: white;
   font-weight: 800;
 }
@@ -55,13 +58,3 @@ body {
   transform: scale(0.95);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
-
-a,
-a:visited {
-  color: #00d8ff
-}
-
-/* nav > ul {
-  margin: 0;
-  padding: 16px 32px;
-} */

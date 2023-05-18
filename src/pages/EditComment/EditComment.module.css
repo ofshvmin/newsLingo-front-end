@@ -6,6 +6,7 @@
 .editComment * {
   font-family: var(--font-family);
 }
+
 .editComment > form {
   height: 100%;
   width: 100%;
@@ -35,13 +36,3 @@
   width: 80px;
   padding: 0;
 }
-
-/* .container a {
-  border: none;
-  font-size: 14px;
-  background: none;
-  font-weight: 500;
-  margin-top: 14px;
-  text-align: center;
-  color: rgb(200, 200, 200);
-} */
