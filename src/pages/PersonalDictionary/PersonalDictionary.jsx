@@ -4,9 +4,7 @@ import WordCard from '../../components/WordCard/WordCard'
 // css
 import styles from './PersonalDictionary.module.css'
 
-
 const PersonalDictionary = ({dictionary, handleDeleteWord}) => {
-  console.log("PERSONAL DICTIONARY",dictionary);
   return (
     <main className={styles.dictionaryContainer}>
       {!dictionary.length ? 'No Words' :

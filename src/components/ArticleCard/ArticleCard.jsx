@@ -6,7 +6,6 @@ import styles from './ArticleCard.module.css'
 import articleImgPlaceholder from '../../assets/icons/no-image-icon.png'
 
 const ArticleCard = ({article}) => {
-  console.log('Article', article);
   const creator = article.creator ? article.creator[0] : "NO CREATOR FOUND"
   const image_url = article.image_url ? article.image_url : articleImgPlaceholder
 
