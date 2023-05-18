@@ -33,6 +33,7 @@
 
 .commentCard > .actions > button * {
   color: white;
+  text-decoration: none;
 }
 
 .commentCard > .actions > button:hover {

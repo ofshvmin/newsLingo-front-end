@@ -19,68 +19,95 @@
   width: 50px;
 } */
 
-.navContainer > ul {
+.navContainer > * {
   margin: 0;
-  /* width: 100%; */
+}
+
+.navContainer > ul {
+  /* width: 40%; */
   display: flex;
   padding: 0;
   list-style: none;
   font-weight: bold;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 20px;
+}
+
+.navContainer > ul > a {
+  text-decoration: none;
+}
+
+.navContainer > ul > a > li {
+  /* margin: 10px 0; */
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.navContainer > ul > a > li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+#links {
+  color: white;
+  /* display: flex; */
 }
 
 .navContainer > #links > img {
   height: 30px;
+  display: flex;
 }
+
 .mainNavBtns {
-  text-align: center;
-  width: 140px;
-  background-color: transparent;
-  border: solid white 2px;
-  border-radius: 10px;
-  padding: 8px 0;
-  transition: background-color 0.25s;
+  /* text-align: center; */
+  /* width: 140px; */
+  /* background-color: transparent; */
+  /* border: solid white 2px; */
+  /* border-radius: 10px; */
+  /* padding: 8px 0; */
+  /* transition: background-color 0.25s; */
 }
 
 #welcome {
-  font-size: 16px;
-  text-align: right;
+  color: var(--navBar-color);
+  animation: fadeOut 5s;
+  /* font-size: 16px; */
+  /* text-align: right; */
 }
 
 #logout {
-  text-align: center;
-  width: 140px;
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 2px;
-  transition: background-color 0.25s;
+  /* text-align: center; */
+  /* width: 140px; */
+  /* background-color: white; */
+  /* color: white; */
+  /* border: none; */
+  /* border-radius: 10px; */
+  /* padding: 10px 2px; */
+  /* transition: background-color 0.25s; */
 }
 
-#logout:hover {
+/* #logout:hover {
   background-color: gray;
 }
 
 .mainNavBtns:hover {
   background-color: gray;
-}
+} */
 
-#links {
-  color: white;
-  display: flex;
-}
-
-a,
+/* a,
 a:visited {
   color: #040404;
   text-decoration: none;
-}
+} */
 
-#logout > a, #logout > a:visited {
+/* #logout > a, #logout > a:visited {
   color: black;
+} */
+
+@keyframes fadeOut {
+  0% { color: white;}
+  100% { color: var(--navBar-color);}
 }
 
 @media only screen and (max-width: 414px) {

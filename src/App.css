@@ -56,13 +56,12 @@ body {
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-/* a,
+a,
 a:visited {
   color: #00d8ff
 }
 
-nav > ul {
+/* nav > ul {
   margin: 0;
   padding: 16px 32px;
 } */
-

@@ -64,4 +64,5 @@
 
 .login > .form > div > button > a {
   color: white;
+  text-decoration: none;
 }
