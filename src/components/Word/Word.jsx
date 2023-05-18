@@ -27,7 +27,7 @@ const Word = (props) => {
         <span>{props.word}</span>
       </>
     )
-}
+  }
 }
 
 export default Word

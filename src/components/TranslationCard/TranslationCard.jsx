@@ -33,9 +33,9 @@ const TranslationCard = (props) => {
   if(!hasData) return (
     <main className={styles.translationCard}>
       <div className={styles.relatedWords}>
-          <p>No translation found.</p>
-          <p>No word found.</p>
-        </div>
+        <p>No translation found.</p>
+        <p>No word found.</p>
+      </div>
     </main>
   )
 
@@ -46,19 +46,19 @@ const TranslationCard = (props) => {
       <main className={styles.translationCard}>
         <div className={styles.relatedWords}>
           <p>No translation found but view <span>related words:</span></p>
-          <p>{relatedWords.map((word,idx) => (
-            <Word 
-              key={idx}
-              word={word}
-              handleFetchDefinition={props.handleFetchDefinition}
-            />
-            ))
-          }</p>
+          <p>
+            {relatedWords.map((word,idx) => (
+              <Word 
+                key={idx}
+                word={word}
+                handleFetchDefinition={props.handleFetchDefinition}
+              />
+            ))}
+          </p>
         </div>
       </main>
     )
   } 
-
 
   const hasNoRelatedWords = props.translation.every(translation => {
     return !translation.translations.length

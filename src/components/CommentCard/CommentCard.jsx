@@ -24,7 +24,9 @@ const CommentCard = ({comment, articleId, user, handleDeleteComment}) => {
               Edit
             </Link>
           </button >
-          <button className="uniButton" onClick={()=> handleDeleteComment(articleId, comment._id)}>Delete</button>
+          <button className="uniButton" onClick={()=> handleDeleteComment(articleId, comment._id)}>
+            Delete
+          </button>
         </div>
       }
     </article>

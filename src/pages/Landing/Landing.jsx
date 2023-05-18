@@ -11,14 +11,14 @@ const Landing = () => {
       </section>
 
       <section className={styles.about}>
-          <header>
-            <h1>What does NewsLingo solve?</h1>
-          </header>
-          <article>
-            <p>
-              News articles are a great source for practicing a new language and learning about the cultures of those who speak it. For novice and intermediate-level language learners, news articles can be challenging to interpret.
-            </p>
-          </article>
+        <header>
+          <h1>What does NewsLingo solve?</h1>
+        </header>
+        <article>
+          <p>
+            News articles are a great source for practicing a new language and learning about the cultures of those who speak it. For novice and intermediate-level language learners, news articles can be challenging to interpret.
+          </p>
+        </article>
       </section>
 
       <section className={styles.summary}>

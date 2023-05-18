@@ -91,7 +91,7 @@ function App() {
                 />
             </ProtectedRoute>
           }
-          />
+        />
         <Route
           path='/articles/:articleId/comments/:commentId'
           element={
@@ -99,11 +99,11 @@ function App() {
               <EditComment/>
             </ProtectedRoute>
           }
-          /> 
+        /> 
         <Route 
           path='/' 
           element={<Landing user={user} />} 
-          />
+        />
         <Route
           path='/words/:profileId/dictionary'
           element={
@@ -112,10 +112,10 @@ function App() {
                 user={user} 
                 handleDeleteWord={handleDeleteWord}
                 dictionary={dictionary}
-                />
+              />
             </ProtectedRoute>
           }
-          />
+        />
         <Route
           path='/profiles'
           element={
