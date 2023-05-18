@@ -2,8 +2,18 @@
 import ArticleCategory from "../../components/ArticleCategory/ArticleCategory";
 
 const ArticleList = (props) => {
+  let articlesWithImages = props.articles.filter(article => (
+    !!article.image_url
+  ))
+
+  articlesWithImages = articlesWithImages.filter((article, index, self) =>
+    index === self.findIndex((t) => (
+      t.title === article.title
+    ))
+  )
+
   const categorizedArticles = {};
-  props.articles.forEach(article => {
+  articlesWithImages.forEach(article => {
     if(categorizedArticles[article.category[0]]) 
       categorizedArticles[article.category[0]].push(article)
     else
