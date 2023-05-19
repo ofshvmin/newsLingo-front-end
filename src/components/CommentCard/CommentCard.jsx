@@ -17,6 +17,7 @@ const CommentCard = ({comment, articleId, user, handleDeleteComment}) => {
         </header>
         <p>{comment.text}</p>
       </div>
+      
       {comment.author._id === user.profile &&
         <div className={styles.actions}>
           <button className="uniButton">

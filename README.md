@@ -7,20 +7,17 @@
 ## Intro
 Welcome to NewsLingo, an app that helps individuals learn new languages and cultures through reading news articles. NewsLingo offers helpful word-to-word translations directly within original and current news articles. Readers can then practice their newly acquired vocabulary with NewsLingo's customized dictionary and engage with a community of language learners through the app.
 <br />
-<br />
 
 ## Getting Started
 - [Visit NewsLingo](https://news-lingo.netlify.app)
 - [Trello planning materials](https://trello.com/b/4fmqWiGf/newslingo)
 - [Back-end GitHub repo](https://github.com/cmacnamara/newsLingo-back-end)
 <br />
-<br />
 
 ## Contributors
 - [Chris MacNamara](https://github.com/cmacnamara)
 - [Daniel Mathews](https://github.com/ofshvmin)
 - [Eunice Yang](https://github.com/eunicey)
-<br />
 <br />
 
 ## Attributions
@@ -29,7 +26,6 @@ Welcome to NewsLingo, an app that helps individuals learn new languages and cult
 - Logo from [hatchful](https://www.shopify.com/tools/logo-maker)
 - SVGs from [svgrepo](https://www.svgrepo.com/)
 - [Open Sans Google Fonts](https://fonts.google.com/?query=open+sans)
-<br />
 <br />
 
 ## Technologies
@@ -40,7 +36,8 @@ Welcome to NewsLingo, an app that helps individuals learn new languages and cult
 - Vite
 - JWT
 - JavaScript / HTML / CSS
-<br />
+- [Newsdata API](https://newsdata.io/)
+- [Merriam-Webster's Spanish-English Dictionary API](https://dictionaryapi.com/products/api-spanish-dictionary)
 <br />
 
 ## Ice Box

@@ -7,7 +7,7 @@ const Word = (props) => {
     props.handleFetchDefinition(props.word)
   }
 
-  const regExp = /[a-zA-Z]/g;
+  const regExp = /[a-zA-Z]/g
 
   // If current word contains letters, render a clickable component
   if(regExp.test(props.word)) {

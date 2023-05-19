@@ -1,4 +1,6 @@
+// services
 import * as tokenService from './tokenService'
+
 const BASE_URL = `${import.meta.env.VITE_BACK_END_SERVER_URL}/api/words`
 
 async function getTranslationFromAPI(query) {
@@ -19,8 +21,8 @@ async function createWord(translationCardFormData) {
         'Content-Type': 'application/json' 
       },
       body: JSON.stringify(translationCardFormData)
-          })
-      return res.json()
+    })
+    return res.json()
   } catch(error) {
     console.log(error)
   }

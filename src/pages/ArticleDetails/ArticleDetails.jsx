@@ -67,14 +67,13 @@ const ArticleDetails = (props) => {
 
   if (!article) return <Loading />
 
-  const creator = article.creator ? article.creator[0] : "NO CREATOR FOUND"
   const image_url = article.image_url.slice(0,5) === 'https' ? article.image_url : articleImgPlaceholder
 
   return (
     <main className={styles.articleDetails}>
       <ArticleHeader 
         title={article.title}
-        creator={creator} 
+        creator={article.creator} 
         pubDate={article.pubDate} 
         category={article.category}
         image_url={image_url}

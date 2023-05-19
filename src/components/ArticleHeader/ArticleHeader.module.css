@@ -1,6 +1,7 @@
 .articleHeader {
   grid-area: header;
 }
+
 .articleHeader img {
   width: 60%;
   display: block;

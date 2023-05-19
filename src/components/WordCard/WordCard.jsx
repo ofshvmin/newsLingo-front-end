@@ -1,6 +1,8 @@
+// npm modules
+import { useState } from 'react'
+
 // css
 import styles from './WordCard.module.css'
-import { useState } from 'react'
 
 // components
 import Icon from '../Icon/Icon'
@@ -31,7 +33,8 @@ const WordCard = ({word, handleDeleteWord}) => {
 
   return (
     <div className={styles.wordContainer}  id={ flipCard ? styles.flip : "" } onClick={handleWordCardClick}>
-      <button onClick={()=>{handleDeleteWord(word._id) ; setFlipCard(false) }}>
+      <button onClick={()=>{handleDeleteWord(word._id)
+        setFlipCard(false) }}>
         <Icon category={'Trash'} />
       </button>
       {showDefinition ? 
