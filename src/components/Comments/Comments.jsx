@@ -1,3 +1,4 @@
+// components
 import CommentCard from "../CommentCard/CommentCard"
 
 const Comments = (props) => {

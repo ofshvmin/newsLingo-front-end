@@ -1,6 +1,8 @@
+// npm modules
+import { useState } from 'react'
+
 // css
 import styles from './WordCard.module.css'
-import { useState } from 'react'
 
 // components
 import Icon from '../Icon/Icon'

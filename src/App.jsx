@@ -78,7 +78,7 @@ function App() {
               <ArticleList articles={articles} />
             </ProtectedRoute>
           }
-          />
+        />
         <Route
           path='/articles/:articleId'
           element={
@@ -88,7 +88,7 @@ function App() {
                 handleDeleteWord={handleDeleteWord}
                 handleAddWord={handleAddWord}
                 dictionary={dictionary}
-                />
+              />
             </ProtectedRoute>
           }
         />

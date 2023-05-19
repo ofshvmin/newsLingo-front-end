@@ -12,7 +12,6 @@ const EditComment = () => {
   const {state} = useLocation()
   const {articleId, commentId} = useParams()
   const navigate = useNavigate()
-
   const [formData, setFormData] = useState(state)
 
   const handleChange = (evt) => {

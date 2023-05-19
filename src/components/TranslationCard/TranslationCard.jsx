@@ -63,6 +63,7 @@ const TranslationCard = (props) => {
   const hasNoRelatedWords = props.translation.every(translation => {
     return !translation.translations.length
   })
+  
   if(hasNoRelatedWords) return (
     <main className={styles.translationCard}>
       <div className={styles.relatedWords}>
@@ -103,12 +104,13 @@ const TranslationCard = (props) => {
             </textarea>
           </>
         ))}
+
         <div className={styles.favorite}>
           <button type="submit">
             {favorite ?
-            <Icon category={'Favorited'} />
-            :
-            <Icon category={'Favorite'} />
+              <Icon category={'Favorited'} />
+              :
+              <Icon category={'Favorite'} />
             }
           </button>
         </div>

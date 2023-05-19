@@ -2,7 +2,6 @@
 import styles from './ArticleHeader.module.css'
 
 const ArticleHeader = (props) => {
-
   return (
     <header className={styles.articleHeader}>
       <h3>{props.category[0].toUpperCase()}</h3>

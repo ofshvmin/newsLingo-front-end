@@ -7,7 +7,6 @@ import styles from './ArticleBody.module.css'
 // npm modules
 import { useState, useEffect } from 'react'
 
-
 const ArticleBody = (props) => {
   const [words, setWords] = useState([])
 
